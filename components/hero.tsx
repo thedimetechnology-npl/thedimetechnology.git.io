@@ -42,25 +42,31 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row items-start gap-4 mb-12">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-semibold px-8 h-14 text-base shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-105"
+                className="relative overflow-hidden bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 text-slate-900 font-semibold px-8 h-14 text-base shadow-lg shadow-cyan-500/30 transition-all hover:scale-105 group"
                 asChild
               >
                 <a href={heroData.primaryCTA.href} target="_blank" rel="noopener noreferrer">
-                  {heroData.primaryCTA.text}
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-blaze" />
+                  <span className="relative z-10 flex items-center group-hover:text-white transition-colors">
+                    {heroData.primaryCTA.text}
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </span>
                 </a>
               </Button>
               <Button
                 size="lg"
                 variant="outline"
-                className="border-2 border-cyan-500/30 hover:border-cyan-500/60 hover:bg-cyan-500/10 px-8 h-14 text-base group bg-transparent text-white"
+                className="relative overflow-hidden border-2 border-cyan-500/30 hover:border-orange-500/60 px-8 h-14 text-base group bg-transparent text-white transition-all"
                 asChild
               >
                 <a href={heroData.secondaryCTA.href} target="_blank" rel="noopener noreferrer">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 flex items-center justify-center mr-2 group-hover:scale-110 transition-transform">
-                    <Play className="h-3 w-3 text-slate-900 fill-slate-900 ml-0.5" />
+                  <span className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-yellow-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-blaze" />
+                  <div className="relative z-10 flex items-center">
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 group-hover:from-orange-500 group-hover:to-red-500 flex items-center justify-center mr-2 transition-all duration-300 group-hover:animate-fire-pulse">
+                      <Play className="h-3 w-3 text-slate-900 fill-slate-900 ml-0.5" />
+                    </div>
+                    {heroData.secondaryCTA.text}
                   </div>
-                  {heroData.secondaryCTA.text}
                 </a>
               </Button>
             </div>
@@ -80,14 +86,14 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+        <div className="mt-12 sm:mt-16 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
           {processData.heroFlow.map((item, index) => (
             <div key={item.step} className="relative group">
-              <div className="text-center p-6 rounded-2xl bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-500/40 transition-all shadow-lg hover:shadow-cyan-500/20 hover:-translate-y-1">
-                <div className="w-14 h-14 mx-auto rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-colors">
-                  <span className="text-2xl">{item.icon}</span>
+              <div className="text-center p-3 sm:p-4 md:p-6 rounded-xl sm:rounded-2xl bg-slate-800/50 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-500/40 transition-all shadow-lg hover:shadow-cyan-500/20 hover:-translate-y-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 mx-auto rounded-xl sm:rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center mb-2 sm:mb-3 md:mb-4 group-hover:from-cyan-500/30 group-hover:to-blue-500/30 transition-colors">
+                  <span className="text-lg sm:text-xl md:text-2xl">{item.icon}</span>
                 </div>
-                <span className="text-base font-semibold text-white">{item.step}</span>
+                <span className="text-xs sm:text-sm md:text-base font-semibold text-white line-clamp-2">{item.step}</span>
               </div>
               {index < 3 && (
                 <div className="hidden md:block absolute top-1/2 -right-2 w-4 h-px bg-gradient-to-r from-cyan-500/50 to-transparent" />

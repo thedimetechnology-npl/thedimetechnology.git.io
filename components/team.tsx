@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image"
-import { Linkedin, Github, Mail } from "lucide-react"
+import { Linkedin, Github, Mail, Globe } from "lucide-react"
 import teamData from "@/data/team.json"
 
 export function Team() {
@@ -43,25 +43,32 @@ export function Team() {
                 {/* Social Links */}
                 <div className="flex items-center gap-3 mt-4 opacity-0 group-hover:opacity-100 transition-opacity">
                   <a
-                    href="#"
+                    href={member.linkedin || ""}
                     className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 transition-all"
                     aria-label={`${member.name}'s LinkedIn`}
                   >
                     <Linkedin size={16} />
                   </a>
                   <a
-                    href="#"
+                    href={member.github || ""}
                     className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 transition-all"
                     aria-label={`${member.name}'s GitHub`}
                   >
                     <Github size={16} />
                   </a>
                   <a
-                    href="#"
+                    href={member.email != '#' ? `mailto:${member.email}` : ""}
                     className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 transition-all"
                     aria-label={`Email ${member.name}`}
                   >
                     <Mail size={16} />
+                  </a>
+                  <a
+                    href={member.website || ""}
+                    className="w-9 h-9 rounded-full bg-white/10 backdrop-blur-sm flex items-center justify-center text-white hover:bg-gradient-to-r hover:from-cyan-500 hover:to-blue-500 transition-all"
+                    aria-label={`Website ${member.name}`}
+                  >
+                    <Globe size={16} />
                   </a>
                 </div>
               </div>

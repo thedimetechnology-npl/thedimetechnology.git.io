@@ -2,41 +2,73 @@
   {
     "name": "Roman",
     "role": "ASP.NET Developer",
-    "image": "/assets/img/team/roman.jpg"
+    "image": "/assets/img/team/roman.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Joseph",
     "role": "Java Developer",
-    "image": "/assets/img/team/josheph.jpg"
+    "image": "/assets/img/team/josheph.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Bibek",
     "role": "Python and AI Developer",
-    "image": "/assets/img/team/bibek.jpg"
+    "image": "/assets/img/team/bibek.jpg",
+    "linkedin": "https://www.linkedin.com/in/imbbek/",
+    "github": "#",
+    "email": "modernbib@gmail.com",
+    "website": "https://www.chalisebibek.com.np/"
   },
   {
     "name": "Pratik",
     "role": "Cyber Security",
-    "image": "/assets/img/team/pratik.jpg"
+    "image": "/assets/img/team/pratik.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Susant",
     "role": "Network Security",
-    "image": "/assets/img/team/susant.jpg"
+    "image": "/assets/img/team/susant.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Shahid",
     "role": "Project Manager",
-    "image": "/assets/img/team/shahid.jpg"
+    "image": "/assets/img/team/shahid.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Balkrishna",
     "role": "WordPress Developer",
-    "image": "/assets/img/team/balkrishna.jpg"
+    "image": "/assets/img/team/balkrishna.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Roshan",
     "role": "PHP and Flutter Developer",
-    "image": "/assets/img/team/roshan.jpg"
+    "image": "/assets/img/team/roshan.jpg",
+    "linkedin": "https://www.linkedin.com/in/roshan-kc-12892b25a/",
+    "github": "https://github.com/roshankc123",
+    "email": "kcroshan566@gmail.com",
+    "website": "https://roshan-kc.com.np/"
   }
 ]

@@ -52,11 +52,12 @@ export function Header() {
 
           <div className="hidden lg:block">
             <Button
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-semibold shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-105"
+              className="relative overflow-hidden bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 text-slate-900 font-semibold shadow-lg shadow-cyan-500/30 transition-all hover:scale-105 group"
               asChild
             >
               <a href={siteConfig.company.freelanceLink} target="_blank" rel="noopener noreferrer">
-                Let's Get Started
+                <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-blaze" />
+                <span className="relative z-10 group-hover:text-white transition-colors">Let's Get Started</span>
               </a>
             </Button>
           </div>
@@ -73,24 +74,25 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20 pt-4">
+          <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20 pt-4 bg-slate-900/95 backdrop-blur-lg -mx-6 px-6 rounded-b-2xl shadow-xl shadow-cyan-500/10">
             <div className="flex flex-col gap-4">
               {siteConfig.navigation.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-slate-300 hover:text-cyan-400 transition-colors py-2"
+                  className="text-slate-300 hover:text-cyan-400 transition-colors py-2 hover:bg-cyan-500/10 px-4 rounded-lg -mx-4"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
               <Button
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-semibold w-full mt-2"
+                className="relative overflow-hidden bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-500 text-slate-900 font-semibold w-full mt-2 group"
                 asChild
               >
                 <a href={siteConfig.company.freelanceLink} target="_blank" rel="noopener noreferrer">
-                  Let's Get Started
+                  <span className="absolute inset-0 bg-gradient-to-r from-orange-500 via-red-500 to-yellow-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-blaze" />
+                  <span className="relative z-10 group-hover:text-white transition-colors">Let's Get Started</span>
                 </a>
               </Button>
             </div>

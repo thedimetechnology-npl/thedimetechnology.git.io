@@ -1,12 +1,25 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
-import { ArrowRight, Play, Sparkles } from "lucide-react"
+import { ArrowRight, Play, Sparkles, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
 import heroData from "@/data/hero.json"
 import processData from "@/data/process.json"
+import siteConfig from "@/data/site-config.json"
 
 export function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false)
+
+  // Extract YouTube video ID from URL
+  const getYouTubeId = (url: string) => {
+    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/)
+    return match ? match[1] : null
+  }
+
+  const youtubeId = getYouTubeId(siteConfig.company.youtubeUrl)
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900" />
@@ -57,17 +70,15 @@ export function Hero() {
                 size="lg"
                 variant="outline"
                 className="relative overflow-hidden border-2 border-cyan-500/30 hover:border-orange-500/60 px-8 h-14 text-base group bg-transparent text-white transition-all"
-                asChild
+                onClick={() => setIsVideoOpen(true)}
               >
-                <a href={heroData.secondaryCTA.href} target="_blank" rel="noopener noreferrer">
-                  <span className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-yellow-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-blaze" />
-                  <div className="relative z-10 flex items-center">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 group-hover:from-orange-500 group-hover:to-red-500 flex items-center justify-center mr-2 transition-all duration-300 group-hover:animate-fire-pulse">
-                      <Play className="h-3 w-3 text-slate-900 fill-slate-900 ml-0.5" />
-                    </div>
-                    {heroData.secondaryCTA.text}
+                <span className="absolute inset-0 bg-gradient-to-r from-orange-500/20 via-red-500/20 to-yellow-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-blaze" />
+                <div className="relative z-10 flex items-center">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 group-hover:from-orange-500 group-hover:to-red-500 flex items-center justify-center mr-2 transition-all duration-300 group-hover:animate-fire-pulse">
+                    <Play className="h-3 w-3 text-slate-900 fill-slate-900 ml-0.5" />
                   </div>
-                </a>
+                  {heroData.secondaryCTA.text}
+                </div>
               </Button>
             </div>
           </div>
@@ -102,6 +113,39 @@ export function Hero() {
           ))}
         </div>
       </div>
+
+      {/* Video Modal */}
+      <Dialog open={isVideoOpen} onOpenChange={setIsVideoOpen}>
+        <DialogContent className="max-w-5xl w-[95vw] p-0 bg-slate-950 border-cyan-500/30 overflow-hidden">
+          <DialogClose className="absolute right-4 top-4 z-50 rounded-full bg-slate-900/80 p-2 text-white hover:bg-slate-800 transition-colors border border-cyan-500/30 hover:border-cyan-500/60">
+            <X className="h-5 w-5" />
+            <span className="sr-only">Close</span>
+          </DialogClose>
+          <div className="relative w-full aspect-video">
+            {youtubeId ? (
+              <iframe
+                width="100%"
+                height="100%"
+                src={`https://www.youtube.com/embed/${youtubeId}?autoplay=1`}
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            ) : (
+              <video
+                controls
+                autoPlay
+                className="w-full h-full object-cover"
+              >
+                <source src={heroData.secondaryCTA.href} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            )}
+          </div>
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }

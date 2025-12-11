@@ -1,0 +1,35 @@
+{
+  "sectionTitle": "Our Tech Stack",
+  "sectionSubtitle": "We work with a wide range of cutting-edge technologies to deliver the best solutions for your needs.",
+  "categories": [
+    {
+      "name": "Languages",
+      "items": ["PHP", "Java", "Python", ".NET", "JavaScript", "TypeScript"]
+    },
+    {
+      "name": "Full-Stack",
+      "items": ["MERN", "MEAN", "MEVN", "JAMstack", "Next.js", "Nuxt.js"]
+    },
+    {
+      "name": "Mobile",
+      "items": ["React Native", "Flutter", "Xamarin", "Cordova", "iOS", "Android"]
+    },
+    {
+      "name": "E-commerce & CMS",
+      "items": ["Shopify", "WooCommerce", "Moodle", "WordPress", "Strapi", "Sanity"]
+    },
+    {
+      "name": "Infrastructure",
+      "items": ["DevOps", "AWS", "Azure", "Docker", "Kubernetes", "CI/CD"]
+    },
+    {
+      "name": "Security",
+      "items": ["Cyber Security", "Network Security", "Cisco", "Juniper", "Penetration Testing", "Compliance"]
+    }
+  ],
+  "summary": {
+    "technologies": "30+",
+    "projects": "50+",
+    "experience": "10+"
+  }
+}

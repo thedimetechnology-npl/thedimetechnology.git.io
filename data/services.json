@@ -1,0 +1,36 @@
+{
+  "sectionTitle": "Our collection of tech services spans every stage of the transformation process.",
+  "sectionSubtitle": "Explore how we help businesses transform with cutting-edge technology solutions.",
+  "services": [
+    {
+      "icon": "Code",
+      "title": "Development & Maintenance",
+      "description": "Full software development lifecycle from concept to deployment. We build scalable, maintainable solutions that grow with your business."
+    },
+    {
+      "icon": "Search",
+      "title": "Code Review & Optimization",
+      "description": "Comprehensive code audits to improve quality, performance, and security. We identify bottlenecks and optimize for efficiency."
+    },
+    {
+      "icon": "Users",
+      "title": "Collaboration & Project Management",
+      "description": "Seamless team coordination and agile project management. We integrate with your workflow to ensure smooth delivery."
+    },
+    {
+      "icon": "Wrench",
+      "title": "Support & Bug Fixes",
+      "description": "Reliable post-launch maintenance and rapid bug resolution. We keep your systems running smoothly around the clock."
+    },
+    {
+      "icon": "Rocket",
+      "title": "Integration & Deployment",
+      "description": "Expert DevOps services for CI/CD pipelines, cloud infrastructure, and seamless system integrations."
+    },
+    {
+      "icon": "Lightbulb",
+      "title": "Innovation & Continuous Improvement",
+      "description": "Ongoing technology evolution and feature enhancements. We help you stay ahead with cutting-edge solutions."
+    }
+  ]
+}

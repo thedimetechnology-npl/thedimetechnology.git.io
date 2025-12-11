@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Roman",
+    "role": "ASP.NET Developer",
+    "image": "https://thedimetechnology.com.np/assets/img/team/roman.jpg"
+  },
+  {
+    "name": "Joseph",
+    "role": "Java Developer",
+    "image": "https://thedimetechnology.com.np/assets/img/team/josheph.jpg"
+  },
+  {
+    "name": "Bibek",
+    "role": "Python and AI Developer",
+    "image": "https://thedimetechnology.com.np/assets/img/team/bibek.jpg"
+  },
+  {
+    "name": "Pratik",
+    "role": "Cyber Security",
+    "image": "https://thedimetechnology.com.np/assets/img/team/pratik.jpg"
+  },
+  {
+    "name": "Susant",
+    "role": "Network Security",
+    "image": "https://thedimetechnology.com.np/assets/img/team/susant.jpg"
+  },
+  {
+    "name": "Shahid",
+    "role": "Project Manager",
+    "image": "https://thedimetechnology.com.np/assets/img/team/shahid.jpg"
+  },
+  {
+    "name": "Balkrishna",
+    "role": "WordPress Developer",
+    "image": "https://thedimetechnology.com.np/assets/img/team/balkrishna.jpg"
+  },
+  {
+    "name": "Roshan",
+    "role": "PHP and Flutter Developer",
+    "image": "https://thedimetechnology.com.np/assets/img/team/roshan.jpg"
+  }
+]

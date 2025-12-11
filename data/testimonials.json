@@ -1,0 +1,139 @@
+[
+  {
+    "name": "Ashley",
+    "location": "United States",
+    "rating": 5,
+    "feedback": "Very efficient, works at a nice pace and is very willing to work with you.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/USA.jpg"
+  },
+  {
+    "name": "Priyesh Joseph",
+    "location": "United States",
+    "rating": 5,
+    "feedback": "Shahid and team Successfully completed the project on time. Those guys are awesome to work with.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/joseph.jpg"
+  },
+  {
+    "name": "Ashok Raj DK",
+    "company": "Mazenet Solution",
+    "designation": "Sr. Web Development",
+    "location": "India",
+    "rating": 5,
+    "feedback": "I was very impressed with the quality of work that was delivered. I highly recommend Shahid for any project.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/mazenet.jpg"
+  },
+  {
+    "name": "Sara Jama",
+    "company": "Yousuf Motors",
+    "designation": "Social Media Manager",
+    "location": "United States",
+    "rating": 5,
+    "feedback": "Shahid did amazing work, I will definitely hire again.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/yousuf.jpg"
+  },
+  {
+    "name": "Alvin",
+    "company": "System Canada",
+    "designation": "CEO",
+    "location": "Canada",
+    "rating": 5,
+    "feedback": "Thanks for the great input.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/systemcanada.jpg"
+  },
+  {
+    "name": "Stacey Yeong",
+    "location": "Malaysia",
+    "rating": 5,
+    "feedback": "Shahid was patient in understanding my requirements.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/malaysia.jpg"
+  },
+  {
+    "name": "Ken Lyle",
+    "location": "Costa Rica",
+    "rating": 5,
+    "feedback": "The team worked both hard and intelligently on my project, and we met our goals. Recommended, and will look to hire again.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/ken.jpg"
+  },
+  {
+    "name": "Ghassan Alabdulgader",
+    "company": "Permitech",
+    "designation": "CEO",
+    "location": "Saudi Arabia",
+    "rating": 5,
+    "feedback": "Task has been completed, Successful.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/permitech.jpg"
+  },
+  {
+    "name": "Dnyanda Yande",
+    "company": "Fourty Two Labs",
+    "designation": "HR",
+    "location": "India",
+    "rating": 5,
+    "feedback": "We are happy with his work.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/fourtytwo.jpg"
+  },
+  {
+    "name": "Ali",
+    "location": "Saudi Arabia",
+    "rating": 5,
+    "feedback": "Shahid and his team exceeded my expectations with their professionalism and attention to detail. I would not hesitate to use their services again in the future. Many Thanks Shahid",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/saudi.jpg"
+  },
+  {
+    "name": "Emad",
+    "location": "Jordan",
+    "rating": 5,
+    "feedback": "Shahid exceeded my expectations with their professionalism and attention to detail. I would not hesitate to use their services again in the future.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/emad.jpg"
+  },
+  {
+    "name": "Atul Gupta",
+    "location": "India",
+    "rating": 5,
+    "feedback": "Very dedicated and great work.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/atul.jpg"
+  },
+  {
+    "name": "Anandh Prakharan",
+    "location": "India",
+    "rating": 5,
+    "feedback": "Shahid Alam and His team supported really superb. They perfectly done my needs. I recommend him to other clients as well. I hope in future also i will connect with him. Good luck.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/anandh.jpg"
+  },
+  {
+    "name": "Roman",
+    "location": "Russia",
+    "rating": 5,
+    "feedback": "Thank you and your team very much for the work done! With all my heart !!! as agreed, all tasks were done clearly, a good understanding of the FLUTTER architecture. I recommend you to work with them!!!",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/russia.jpg"
+  },
+  {
+    "name": "Abhay Sobti",
+    "location": "India",
+    "rating": 5,
+    "feedback": "The work has been completed to our satisfaction and the team was friendly, had no hassles and was available to assist. We should work again. Thanks to Shahid and his Team.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/abhay.jpg"
+  },
+  {
+    "name": "Nauryzbek",
+    "location": "Kazakhstan",
+    "rating": 5,
+    "feedback": "Shahid exceeded my expectations with their professionalism and attention to detail. Team of Highly Experienced Professionals! Great Job!!!",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/Kazakhstan.jpg"
+  },
+  {
+    "name": "Joseph Priyesh",
+    "location": "United States",
+    "rating": 5,
+    "feedback": "I wanted to take a moment to express my heartfelt thanks for all the help and support you've provided and did an amazing job. Once again, thank you both for the excellent work and support.",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/joseph.jpg"
+  },
+  {
+    "name": "Abhay Sobti",
+    "company": "SharePro Air",
+    "location": "India",
+    "rating": 5,
+    "feedback": "Excellent job once again by Shahid's team As usual the work was completed in time and done perfectly Many thanks to Bibek Chalise and Roshan",
+    "image": "https://thedimetechnology.com.np/assets/img/testimonials/sharepro.jpg"
+  }
+]

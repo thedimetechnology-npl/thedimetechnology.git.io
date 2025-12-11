@@ -1,0 +1,32 @@
+{
+  "sectionTitle": "How We Work",
+  "sectionSubtitle": "A streamlined approach to delivering exceptional results, every time.",
+  "steps": [
+    {
+      "icon": "MessageSquare",
+      "title": "Discovery & Planning",
+      "description": "We start by understanding your vision, goals, and requirements through in-depth consultations."
+    },
+    {
+      "icon": "Pencil",
+      "title": "Design & Architecture",
+      "description": "Our team creates detailed designs and technical architecture that align with your business objectives."
+    },
+    {
+      "icon": "Code2",
+      "title": "Development & Testing",
+      "description": "We build your solution using best practices, with rigorous testing at every stage."
+    },
+    {
+      "icon": "CheckCircle",
+      "title": "Launch & Support",
+      "description": "We deploy your solution and provide ongoing support to ensure continued success."
+    }
+  ],
+  "heroFlow": [
+    { "step": "Ideate", "icon": "💡" },
+    { "step": "Design", "icon": "🎨" },
+    { "step": "Develop", "icon": "⚙️" },
+    { "step": "Deliver", "icon": "🚀" }
+  ]
+}

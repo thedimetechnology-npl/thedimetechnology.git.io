@@ -20,11 +20,10 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-slate-900/90 backdrop-blur-lg border-b border-cyan-500/20 shadow-lg shadow-cyan-500/5"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-slate-900/90 backdrop-blur-lg border-b border-cyan-500/20 shadow-lg shadow-cyan-500/5"
+        : "bg-transparent"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
@@ -57,7 +56,7 @@ export function Header() {
               asChild
             >
               <a href={siteConfig.company.freelanceLink} target="_blank" rel="noopener noreferrer">
-                Get Started
+                Let's Get Started
               </a>
             </Button>
           </div>
@@ -91,7 +90,7 @@ export function Header() {
                 asChild
               >
                 <a href={siteConfig.company.freelanceLink} target="_blank" rel="noopener noreferrer">
-                  Get Started
+                  Let's Get Started
                 </a>
               </Button>
             </div>

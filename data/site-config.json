@@ -6,7 +6,7 @@
     "description": "We are a collective of passionate technologists bound together by our deep tech knowledge, human-centric mindset, and a passion for using technology and digital solutions to drive business transformation.",
     "logo": "D",
     "freelanceLink": "https://www.truelancer.com/freelancer/shahidalam7",
-    "videoUrl": "https://thedimetechnology.com.np/assets/img/video/shahid.mp4",
+    "videoUrl": "/assets/img/video/shahid.mp4",
     "youtubeUrl": "https://www.youtube.com/watch?v=_8BO2iAtkWw"
   },
   "contact": {
@@ -23,16 +23,52 @@
     "github": "#"
   },
   "navigation": [
-    { "href": "#about", "label": "About" },
-    { "href": "#services", "label": "Services" },
-    { "href": "#process", "label": "Process" },
-    { "href": "#team", "label": "Team" },
-    { "href": "#testimonials", "label": "Testimonials" },
-    { "href": "#tech", "label": "Technologies" },
-    { "href": "#contact", "label": "Contact" }
+    {
+      "href": "#about",
+      "label": "About"
+    },
+    {
+      "href": "#services",
+      "label": "Services"
+    },
+    {
+      "href": "#process",
+      "label": "Process"
+    },
+    {
+      "href": "#team",
+      "label": "Team"
+    },
+    {
+      "href": "#testimonials",
+      "label": "Testimonials"
+    },
+    {
+      "href": "#tech",
+      "label": "Technologies"
+    },
+    {
+      "href": "#contact",
+      "label": "Contact"
+    }
   ],
   "footerLinks": {
-    "quickLinks": ["Services", "Process", "Technologies", "Team", "Contact"],
-    "legal": [{ "label": "Privacy Policy", "href": "#" }, { "label": "Terms of Service", "href": "#" }]
+    "quickLinks": [
+      "Services",
+      "Process",
+      "Technologies",
+      "Team",
+      "Contact"
+    ],
+    "legal": [
+      {
+        "label": "Privacy Policy",
+        "href": "#"
+      },
+      {
+        "label": "Terms of Service",
+        "href": "#"
+      }
+    ]
   }
 }

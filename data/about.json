@@ -14,7 +14,7 @@
   ],
   "closingNote": "We value innovation and creativity, striving for quality in everything we do. Each project receives strategic solutions tailored to our clients, and our commitment to reliable support and transparent communication builds lasting trust.",
   "images": {
-    "main": "https://thedimetechnology.com.np/assets/img/about.jpg",
-    "video": "https://thedimetechnology.com.np/assets/img/about-2.jpg"
+    "main": "/assets/img/about.jpg",
+    "video": "/assets/img/about-2.jpg"
   }
 }

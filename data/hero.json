@@ -9,7 +9,7 @@
   },
   "secondaryCTA": {
     "text": "Watch Video",
-    "href": "https://thedimetechnology.com.np/assets/img/video/shahid.mp4"
+    "href": "/assets/img/video/shahid.mp4"
   },
-  "image": "https://thedimetechnology.com.np/assets/img/hero-img.svg"
+  "image": "/assets/img/hero-img.svg"
 }

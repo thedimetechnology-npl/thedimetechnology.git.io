@@ -1,13 +1,37 @@
 {
   "sectionTitle": "Trusted By",
   "clients": [
-    { "name": "Mazenet", "logo": "https://thedimetechnology.com.np/assets/img/clients/mazenet.jpg" },
-    { "name": "FortyTwo Labs", "logo": "https://thedimetechnology.com.np/assets/img/clients/fourtytwo.jpg" },
-    { "name": "Permitech", "logo": "https://thedimetechnology.com.np/assets/img/clients/permitech.jpg" },
-    { "name": "System Canada", "logo": "https://thedimetechnology.com.np/assets/img/clients/systemcanada.jpg" },
-    { "name": "ABS Infosys", "logo": "https://thedimetechnology.com.np/assets/img/clients/absinfosys.jpg" },
-    { "name": "Infonet", "logo": "https://thedimetechnology.com.np/assets/img/clients/infonet.jpg" },
-    { "name": "Sunrise", "logo": "https://thedimetechnology.com.np/assets/img/clients/sunrise.jpg" },
-    { "name": "SharePro", "logo": "https://thedimetechnology.com.np/assets/img/clients/sharepro.jpg" }
+    {
+      "name": "Mazenet",
+      "logo": "/assets/img/clients/mazenet.jpg"
+    },
+    {
+      "name": "FortyTwo Labs",
+      "logo": "/assets/img/clients/fourtytwo.jpg"
+    },
+    {
+      "name": "Permitech",
+      "logo": "/assets/img/clients/permitech.jpg"
+    },
+    {
+      "name": "System Canada",
+      "logo": "/assets/img/clients/systemcanada.jpg"
+    },
+    {
+      "name": "ABS Infosys",
+      "logo": "/assets/img/clients/absinfosys.jpg"
+    },
+    {
+      "name": "Infonet",
+      "logo": "/assets/img/clients/infonet.jpg"
+    },
+    {
+      "name": "Sunrise",
+      "logo": "/assets/img/clients/sunrise.jpg"
+    },
+    {
+      "name": "SharePro",
+      "logo": "/assets/img/clients/sharepro.jpg"
+    }
   ]
 }

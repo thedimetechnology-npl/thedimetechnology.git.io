@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     title: "The Dime Technology | Your Freelance Tech Partner",
     description:
       "Expert freelance technology services driving business transformation. Web Development, Mobile Apps, DevOps, Cloud Solutions & More.",
-    url: "https://thedimetechnology.com",
+    url: "https://thedimetechnology.com.np",
     siteName: "The Dime Technology",
     locale: "en_US",
     type: "website",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     description:
       "Expert freelance technology services. Web Development, Mobile Apps, DevOps, Cloud Solutions & More.",
     images: ["/og-image.jpg"],
-    creator: "@dimetechnology",
+    creator: "@thedimetechnology",
   },
   robots: {
     index: true,
@@ -117,9 +117,9 @@ export default function RootLayout({
     alternateName: "DimeTech",
     description:
       "A collective of passionate technologists driving business transformation through innovative technology solutions.",
-    url: "https://thedimetechnology.com",
-    logo: "https://thedimetechnology.com/logo.png",
-    image: "https://thedimetechnology.com/og-image.jpg",
+    url: "https://thedimetechnology.com.np",
+    logo: "https://thedimetechnology.com.np/logo.png",
+    image: "https://thedimetechnology.com.np/og-image.jpg",
     telephone: "+977-9801024024",
     email: "info.thedimetechnology@gmail.com",
     address: {
@@ -168,7 +168,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <meta name="theme-color" content="#0c111d" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-        <link rel="canonical" href="https://thedimetechnology.com" />
+        <link rel="canonical" href="https://thedimetechnology.com.np" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

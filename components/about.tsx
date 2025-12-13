@@ -33,7 +33,7 @@ export function About() {
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-slate-900 font-bold text-sm sm:text-base md:text-lg shadow-lg">
                   <Zap className="h-4 w-4 sm:h-5 sm:w-5" />
                   <span className="hidden xs:inline">{siteConfig.company.name.toUpperCase()}</span>
-                  <span className="xs:hidden">DIME TECH</span>
+                  <span className="xs:hidden">THE DIME TECHNOLOGY</span>
                 </div>
                 <p className="text-slate-300 mt-2 text-xs sm:text-sm font-medium">{siteConfig.company.tagline.toUpperCase()}</p>
               </div>

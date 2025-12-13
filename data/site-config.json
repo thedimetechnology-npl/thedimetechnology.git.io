@@ -1,7 +1,7 @@
 {
   "company": {
     "name": "The Dime Technology",
-    "shortName": "DimeTech",
+    "shortName": "The Dime Tech",
     "tagline": "Your Freelance Tech Partner",
     "description": "We are a collective of passionate technologists bound together by our deep tech knowledge, human-centric mindset, and a passion for using technology and digital solutions to drive business transformation.",
     "logo": "D",
@@ -19,8 +19,8 @@
     "facebook": "#",
     "twitter": "#",
     "instagram": "#",
-    "linkedin": "#",
-    "github": "#"
+    "linkedin": "#"
+    
   },
   "navigation": [
     {

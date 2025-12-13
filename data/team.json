@@ -2,33 +2,52 @@
   {
     "name": "Roman",
     "role": "ASP.NET Developer",
-    "image": "/assets/img/team/roman.jpg"
+    "image": "/assets/img/team/roman.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Joseph",
     "role": "Java Developer",
     "image": "/assets/img/team/josheph.jpg",
-    
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Bibek",
     "role": "Python and AI Developer",
-    "image": "/assets/img/team/bibek.jpg"
+    "image": "/assets/img/team/bibek.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Pratik",
     "role": "Cyber Security",
-    "image": "/assets/img/team/pratik.jpg"
+    "image": "/assets/img/team/pratik.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Susant",
     "role": "Network Security",
-    "image": "/assets/img/team/susant.jpg"
+    "image": "/assets/img/team/susant.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Shahid",
     "role": "Project Manager",
-    "image": "/assets/img/team/shahid.jpg"
+    "image": "/assets/img/team/shahid.jpg",
     "linkedin": "https://www.linkedin.com/in/shahidalam-nepal/",
     "github": "https://github.com/azhashmi",
     "email": "afrozhashmi@hotmail.com",
@@ -37,11 +56,19 @@
   {
     "name": "Balkrishna",
     "role": "WordPress Developer",
-    "image": "/assets/img/team/balkrishna.jpg"
+    "image": "/assets/img/team/balkrishna.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   },
   {
     "name": "Roshan",
     "role": "PHP and Flutter Developer",
-    "image": "/assets/img/team/roshan.jpg"
+    "image": "/assets/img/team/roshan.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
   }
 ]

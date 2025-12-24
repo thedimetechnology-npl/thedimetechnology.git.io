@@ -135,5 +135,21 @@
     "rating": 5,
     "feedback": "Excellent job once again by Shahid's team As usual the work was completed in time and done perfectly Many thanks to Bibek Chalise and Roshan",
     "image": "/assets/img/testimonials/sharepro.jpg"
+  },
+  {
+    "name": "Abhay Sobti",
+    "company": "SharePro Air",
+    "location": "India",
+    "rating": 5,
+    "feedback": "As usual, Shahid and his team did the work on time and well. Thanks to the Team.",
+    "image": "/assets/img/testimonials/sharepro.jpg"
+  },
+  {
+    "name": "Ed Graves",
+    "company": "Energy Improvements",
+    "location": "United States",
+    "rating": 5,
+    "feedback": "Shahid was great to work with.",
+    "image": "/assets/img/testimonials/EnergyImprovements.jpg"
   }
 ]

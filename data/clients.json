@@ -44,6 +44,14 @@
     {
       "name": "Clinical Talent Australia",
       "logo": "/assets/img/clients/clinicaltalent.jpg"
+    },
+    {
+      "name": "SapSG",
+      "logo": "/assets/img/clients/SapSG.jpg"
+    },
+    {
+      "name": "SIGASYS-Chinaway",
+      "logo": "/assets/img/clients/SIGASYS-Chinaway.jpg"
     }
   ]
 }

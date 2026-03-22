@@ -73,6 +73,15 @@
     "image": "/assets/img/testimonials/fourtytwo.jpg"
   },
   {
+    "name": "Ken Lyle",
+    "company": "",
+    "designation": "",
+    "location": "Coasta Rica",
+    "rating": 5,
+    "feedback": "The team worked both hard and intelligently on my project, and we met our goals. Recommended, and will look to hire again.",
+    "image": "/assets/img/testimonials/ken.jpg"
+  },
+  {
     "name": "Ali",
     "location": "Saudi Arabia",
     "rating": 5,

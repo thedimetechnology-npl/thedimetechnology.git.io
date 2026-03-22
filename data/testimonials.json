@@ -129,6 +129,15 @@
     "image": "/assets/img/testimonials/joseph.jpg"
   },
   {
+    "name": "Ashok Raj DK",
+    "company": "Mazenet Solution",
+    "designation": "Sr. Web Development",
+    "location": "India",
+    "rating": 5,
+    "feedback": "Excellent work! Mr.Shahid Alam Delivered the ATS project on time with great quality. Quick response, clean and efficient code, very professional and reliable. Highly recommended!",
+    "image": "/assets/img/testimonials/mazenet.jpg"
+  },
+  {
     "name": "Abhay Sobti",
     "company": "SharePro Air",
     "location": "India",
@@ -159,13 +168,22 @@
     "rating": 5,
     "feedback": "Shahid Alam delivered an excellent MSSQL backup and error management solution with great attention to detail. We are very satisfied and look forward to working with him again.",
     "image": "/assets/img/testimonials/atitsolutionz.jpg"
-  }
   },
+  {
     "name": "Raúl Olivares",
     "company": "Siga Sys Chainway ",
     "location": "Chile",
     "rating": 5,
     "feedback": "We brought Shahid on board to support us in key activities. His work was top-notch—highly committed and always available for questions. He met all agreed deadlines and delivered a great service.",
     "image": "/assets/img/testimonials/sigasys.jpg"
+  },
+  {
+    "name": "Ashok Raj DK",
+    "company": "Mazenet Solution",
+    "designation": "Sr. Web Development",
+    "location": "India",
+    "rating": 5,
+    "feedback": "I am happy to work again. They have completed my project on time as promised.",
+    "image": "/assets/img/testimonials/mazenet.jpg"
   }
 ]

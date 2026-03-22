@@ -48,13 +48,6 @@
     "image": "/assets/img/testimonials/malaysia.jpg"
   },
   {
-    "name": "Ken Lyle",
-    "location": "Costa Rica",
-    "rating": 5,
-    "feedback": "The team worked both hard and intelligently on my project, and we met our goals. Recommended, and will look to hire again.",
-    "image": "/assets/img/testimonials/ken.jpg"
-  },
-  {
     "name": "Ghassan Alabdulgader",
     "company": "Permitech",
     "designation": "CEO",
@@ -80,6 +73,33 @@
     "rating": 5,
     "feedback": "The team worked both hard and intelligently on my project, and we met our goals. Recommended, and will look to hire again.",
     "image": "/assets/img/testimonials/ken.jpg"
+  },
+  {
+    "name": "Ken Lyle",
+    "location": "Costa Rica",
+    "rating": 5,
+    "feedback": "Another great task, with some cutting edge ideas (mostly mine) implemented.",
+    "image": "/assets/img/testimonials/ken.jpg"
+  },
+  {
+    "name": "Ken Lyle",
+    "location": "Costa Rica",
+    "rating": 5,
+    "feedback": "To me, these guys show some inexperience, to be honest. But they are hard-working and dedicated, and solve problems. I got great value for dollars, and hope we will continue to grow together.",
+    "image": "/assets/img/testimonials/ken.jpg"
+  },
+  {
+    "name": "Ken Lyle",
+    "location": "Costa Rica",
+    "rating": 5,
+    "feedback": "Amazing again. These guys understand quicky, and execute really well.",
+    "image": "/assets/img/testimonials/ken.jpg"
+  },
+  {
+    "name": "Ken Lyle",
+    "location": "Costa Rica",
+    "rating": 5,
+    "feedback": "Another amazing deliverable! This team rocks."
   },
   {
     "name": "Ali",

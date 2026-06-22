@@ -215,5 +215,30 @@
     "rating": 5,
     "feedback": "I am happy to work again. They have completed my project on time as promised.",
     "image": "/assets/img/testimonials/mazenet.jpg"
+  },
+  {
+    "name": "Abhay Sobti",
+    "company": "SharePro Air",
+    "location": "India",
+    "rating": 5,
+    "feedback": "As always, Shahid and his team completed the work on time. I am impressed with the willingness of the team to be contacted and engage in discussions with us for issues.",
+    "image": "/assets/img/testimonials/sharepro.jpg"
+  },
+  {
+    "name": Hemanta Koirala",
+    "company": "",
+    "location": "United States",
+    "rating": 5,
+    "feedback": "Very reliable support and completed the work in the timely manner. Highly recommended.",
+    "image": "/assets/img/testimonials/USA.jpg"
+  },
+  {
+    "name": Michael Vangeyt",
+    "company": "",
+    "location": "Cyprus",
+    "rating": 5,
+    "feedback": "Project completed successfully—delivered on time and as specified. Great collaboration, clear communication, and smooth workflow throughout. Happy to work together again!",
+    "image": "/assets/img/testimonials/Cyprus.jpg"
+  {
   }
 ]

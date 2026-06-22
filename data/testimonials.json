@@ -225,7 +225,7 @@
     "image": "/assets/img/testimonials/sharepro.jpg"
   },
   {
-    "name": Hemanta Koirala",
+    "name": "Hemanta Koirala",
     "company": "",
     "location": "United States",
     "rating": 5,
@@ -233,12 +233,35 @@
     "image": "/assets/img/testimonials/USA.jpg"
   },
   {
-    "name": Michael Vangeyt",
+    "name": "Michael Vangeyt",
     "company": "",
     "location": "Cyprus",
     "rating": 5,
     "feedback": "Project completed successfully—delivered on time and as specified. Great collaboration, clear communication, and smooth workflow throughout. Happy to work together again!",
     "image": "/assets/img/testimonials/Cyprus.jpg"
+  },
   {
+    "name": "Michael Vangeyt",
+    "company": "",
+    "location": "Cyprus",
+    "rating": 5,
+    "feedback": "Great work delivering the project on time and meeting all requirements. Communication was clear and the final result works as expected. Would happily collaborate again.",
+    "image": "/assets/img/testimonials/Cyprus.jpg"
+  },
+  {
+    "name": "Michael Vangeyt",
+    "company": "",
+    "location": "Cyprus",
+    "rating": 5,
+    "feedback": "Shahid delivered the project on time and exactly as expected. Communication was clear, work quality was solid, and everything functioned smoothly. Would work together again.",
+    "image": "/assets/img/testimonials/Cyprus.jpg"
+  },
+  {
+    "name": "Muhammed Suhel",
+    "company": "Urban Tecky",
+    "location": "Cyprus",
+    "rating": 5,
+    "feedback": "Shahid Alam is a skilled developer with strong professionalism. He delivers quality work on time, communicates clearly, and handles feedback well. Reliable, responsive, and great to work with.",
+    "image": "/assets/img/testimonials/Urban Tecky.jpg"
   }
 ]

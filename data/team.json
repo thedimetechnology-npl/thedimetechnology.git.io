@@ -1,7 +1,7 @@
 [
   {
-    "name": "Roman",
-    "role": "ASP.NET Developer",
+    "name": "ASP.NET",
+    "role": "Developer",
     "image": "/assets/img/team/roman.jpg",
     "linkedin": "#",
     "github": "#",
@@ -9,8 +9,8 @@
     "website": "#"
   },
   {
-    "name": "Joseph",
-    "role": "Java Developer",
+    "name": "Java",
+    "role": "Developer",
     "image": "/assets/img/team/josheph.jpg",
     "linkedin": "#",
     "github": "#",
@@ -18,8 +18,8 @@
     "website": "#"
   },
   {
-    "name": "Bibek",
-    "role": "Full-Stack Developer",
+    "name": "Mobile App",
+    "role": "Developer",
     "image": "/assets/img/team/bibek.jpg",
     "linkedin": "#",
     "github": "#",
@@ -27,8 +27,8 @@
     "website": "#"
   },
   {
-    "name": "Pratik",
-    "role": "Cyber Security",
+    "name": "Cyber Security",
+    "role": "Engineer",
     "image": "/assets/img/team/pratik.jpg",
     "linkedin": "#",
     "github": "#",
@@ -36,8 +36,8 @@
     "website": "#"
   },
   {
-    "name": "Susant",
-    "role": "Network Security",
+    "name": "Network Security",
+    "role": "Engineer",
     "image": "/assets/img/team/susant.jpg",
     "linkedin": "#",
     "github": "#",
@@ -54,8 +54,8 @@
     "website": "https://www.shahidalam.com.np/"
   },
   {
-    "name": "Balkrishna",
-    "role": "WordPress Developer",
+    "name": "WordPress",
+    "role": "Developer",
     "image": "/assets/img/team/balkrishna.jpg",
     "linkedin": "#",
     "github": "#",
@@ -63,8 +63,8 @@
     "website": "#"
   },
   {
-    "name": "Roshan",
-    "role": "Full-Stack Developer",
+    "name": "Full-Stack",
+    "role": "Developer",
     "image": "/assets/img/team/roshan.jpg",
     "linkedin": "#",
     "github": "#",

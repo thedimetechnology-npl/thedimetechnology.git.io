@@ -259,9 +259,18 @@
   {
     "name": "Muhammed Suhel",
     "company": "Urban Tecky",
-    "location": "Cyprus",
+    "location": "United Arab Emirates",
     "rating": 5,
     "feedback": "Shahid Alam is a skilled developer with strong professionalism. He delivers quality work on time, communicates clearly, and handles feedback well. Reliable, responsive, and great to work with.",
     "image": "/assets/img/testimonials/Urban Tecky.png"
+  },
+  {
+    "name": "Ashok Raj DK",
+    "company": "Mazenet Solution",
+    "designation": "Sr. Web Development",
+    "location": "India",
+    "rating": 5,
+    "feedback": "Shahid Alam and his team was fantastic to work with. Communication was smooth, and their expertise made the process completely stress-free. Highly recommended!",
+    "image": "/assets/img/testimonials/mazenet.jpg"
   }
 ]

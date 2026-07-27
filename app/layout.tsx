@@ -169,6 +169,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#0c111d" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
         <link rel="canonical" href="https://thedimetechnology.com.np" />
+        <meta name="google-adsense-account" content="ca-pub-3958545068103034">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

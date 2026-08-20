@@ -4,6 +4,18 @@ import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
+export const metadata: Metadata = {
+  title: {
+    default: "The Dime Technology | Your Freelance Tech Partner",
+    template: "%s | The Dime Technology",
+  },
+  description:
+    "A collective of passionate technologists driving business transformation through innovative technology solutions.",
+
+  verification: {
+    google: "PeSK2P_Ztk2YUfvCaaAvQvRcAQ7ut6XAq-Hkh3cYsCg",
+  },
+  
 const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 

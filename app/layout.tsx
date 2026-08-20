@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   },
   verification: {
     google: "PeSK2P_Ztk2YUfvCaaAvQvRcAQ7ut6XAq-Hkh3cYsCg",
+    <meta name="google-site-verification" content="PeSK2P_Ztk2YUfvCaaAvQvRcAQ7ut6XAq-Hkh3cYsCg" />
   },
 }
     

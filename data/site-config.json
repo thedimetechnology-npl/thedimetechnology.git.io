@@ -62,11 +62,11 @@
     "legal": [
       {
         "label": "Privacy Policy",
-        "href": "/privacy/index.html"
+        "href": "/privacy/privacy.html"
       },
       {
         "label": "Terms of Service",
-        "href": "#"
+        "href": "/privacy/terms.html"
       }
     ]
   }

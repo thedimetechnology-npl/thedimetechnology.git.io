@@ -16,12 +16,6 @@ export const metadata: Metadata = {
   title: {
     default: "The Dime Technology | Your Freelance Tech Partner",
     template: "%s | The Dime Technology",
-  },
-  verification: {
-    google: "PeSK2P_Ztk2YUfvCaaAvQvRcAQ7ut6XAq-Hkh3cYsCg",
-    <meta name="google-site-verification" content="PeSK2P_Ztk2YUfvCaaAvQvRcAQ7ut6XAq-Hkh3cYsCg" />
-  },
-}
     
   },
   description:

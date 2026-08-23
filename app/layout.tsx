@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Inter, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-  
+
 const _inter = Inter({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
@@ -11,12 +11,6 @@ export const metadata: Metadata = {
   title: {
     default: "The Dime Technology | Your Freelance Tech Partner",
     template: "%s | The Dime Technology",
-    
-export const metadata: Metadata = {
-  title: {
-    default: "The Dime Technology | Your Freelance Tech Partner",
-    template: "%s | The Dime Technology",
-    
   },
   description:
     "A collective of passionate technologists driving business transformation through innovative technology solutions. Expert freelance services in Web Development, Mobile Apps, DevOps, Cloud Solutions, Security & More.",
@@ -175,7 +169,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#0c111d" media="(prefers-color-scheme: dark)" />
         <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
         <link rel="canonical" href="https://thedimetechnology.com.np" />
-        <meta name="google-adsense-account" content="ca-pub-3958545068103034">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     apple: "/apple-icon.png",
   },
   verification: {
-    google: "google.com, pub-3958545068103034, DIRECT, f08c47fec0942fa0",
+    google: "your-google-verification-code",
     // yandex: 'your-yandex-verification-code',
     // bing: 'your-bing-verification-code',
   },

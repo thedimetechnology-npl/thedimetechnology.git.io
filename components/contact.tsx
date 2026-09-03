@@ -2,25 +2,47 @@
 
 import type React from "react"
 import { useState } from "react"
-import { MapPin, Phone, Mail, Clock, Send, Sparkles, CheckCircle2, AlertCircle, Loader2 } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Send, Sparkles, CheckCircle2, AlertCircle, Loader2, Code, Search, Users, Wrench, Rocket, Lightbulb } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import siteConfig from "@/data/site-config.json"
+import servicesData from "@/data/services.json"
+
+const serviceOptions = servicesData.services.map((s) => s.title)
+const budgetOptions = ["< $1k", "$1k - $5k", "$5k - $15k", "$15k - $50k", "$50k+", "Not sure"]
+
+// icon map for service tiles
+const serviceIcons: Record<string, any> = { Code, Search, Users, Wrench, Rocket, Lightbulb }
 
 export function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     organization: "",
+    services: [] as string[],
+    buildRequirement: "",
+    budget: "",
     message: "",
   })
   const [loading, setLoading] = useState(false)
   const [result, setResult] = useState<{ type: "success" | "error"; text: string; waLink?: string } | null>(null)
 
+  const toggleService = (title: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      services: prev.services.includes(title) ? prev.services.filter((s) => s !== title) : [...prev.services, title],
+    }))
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setResult(null)
+    if (formData.services.length === 0) {
+      setResult({ type: "error", text: "Please select at least one service." })
+      return
+    }
     setLoading(true)
     try {
       const res = await fetch("/api/inquiry", {
@@ -34,11 +56,11 @@ export function Contact() {
       setResult({
         type: "success",
         text: data.demo
-          ? "Inquiry received! Owner will get WhatsApp after you configure bot (demo mode active)."
-          : "Inquiry sent! Owner got your message on WhatsApp +977 9801024024 ✅",
+          ? "Inquiry received! Owner will get full details on WhatsApp after bot is configured (demo mode)."
+          : "Inquiry sent! Owner got your services + build details on WhatsApp +977 9801024024 ✅",
         waLink: data.waLink,
       })
-      setFormData({ name: "", email: "", organization: "", message: "" })
+      setFormData({ name: "", email: "", organization: "", services: [], buildRequirement: "", budget: "", message: "" })
     } catch (err: any) {
       setResult({ type: "error", text: err.message || "Could not send inquiry. Try again." })
     } finally {
@@ -64,8 +86,7 @@ export function Contact() {
             </p>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">Ask us anything.</h2>
             <p className="text-slate-400 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 leading-relaxed">
-              Are you a company or brand seeking tech services? An agency looking to scale? A creative mind, a
-              strategist? Let&apos;s connect.
+              Select services, tell us what you want to build — our bot instantly forwards everything to WhatsApp.
             </p>
 
             <div className="space-y-4 sm:space-y-6">
@@ -82,7 +103,6 @@ export function Contact() {
               ))}
             </div>
 
-            {/* Bot info */}
             <div className="mt-8 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex gap-3">
               <div className="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center flex-shrink-0">
                 <Send className="h-4 w-4 text-white" />
@@ -90,7 +110,7 @@ export function Contact() {
               <div>
                 <p className="text-emerald-300 text-sm font-semibold">WhatsApp Bot Active</p>
                 <p className="text-emerald-200/70 text-xs leading-relaxed mt-1">
-                  Every inquiry is instantly forwarded to owner WhatsApp <span className="text-white font-bold">+977 9801024024</span> via bot. No floating logo needed.
+                  Services + build details → instantly to <span className="text-white font-bold">+977 9801024024</span> via bot.
                 </p>
               </div>
             </div>
@@ -101,11 +121,11 @@ export function Contact() {
             <div className="flex items-start sm:items-center gap-2 mb-5 sm:mb-6">
               <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-cyan-400 flex-shrink-0 mt-0.5 sm:mt-0" />
               <h3 className="text-base sm:text-lg md:text-xl font-semibold text-white leading-tight">
-                Ready to experience our services? Let&apos;s start planning.
+                Tell us what to build — bot sends to WhatsApp.
               </h3>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-white mb-2">
@@ -149,20 +169,80 @@ export function Contact() {
                 />
               </div>
 
+              {/* Services - list */}
+              <div>
+                <label className="block text-xs sm:text-sm font-medium text-white mb-2">
+                  Services Interested * <span className="text-slate-500 font-normal">— select one or more</span>
+                </label>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {serviceOptions.map((title) => {
+                    const Icon = serviceIcons[servicesData.services.find((s) => s.title === title)?.icon || "Code"] || Code
+                    const active = formData.services.includes(title)
+                    return (
+                      <button
+                        key={title}
+                        type="button"
+                        onClick={() => toggleService(title)}
+                        className={`text-left flex items-center gap-2.5 px-3 py-2.5 rounded-xl border text-xs sm:text-sm font-medium transition-all ${active ? "bg-cyan-500 text-slate-900 border-cyan-500 shadow-lg shadow-cyan-500/20 scale-[1.01]" : "bg-slate-900/50 text-slate-300 border-cyan-500/20 hover:border-cyan-500/40 hover:text-white"}`}
+                      >
+                        <Icon className={`h-4 w-4 flex-shrink-0 ${active ? "text-slate-900" : "text-cyan-400"}`} />
+                        <span className="leading-tight">{title}</span>
+                        {active && <CheckCircle2 className="h-4 w-4 ml-auto text-slate-900 flex-shrink-0" />}
+                      </button>
+                    )
+                  })}
+                </div>
+                {formData.services.length > 0 && (
+                  <p className="text-[11px] text-emerald-300 mt-2">{formData.services.length} selected → will be sent to WhatsApp</p>
+                )}
+              </div>
+
+              {/* What to build */}
+              <div>
+                <label htmlFor="buildRequirement" className="block text-xs sm:text-sm font-medium text-white mb-2">
+                  What do you want us to build? *
+                </label>
+                <Textarea
+                  id="buildRequirement"
+                  placeholder="E.g., E-commerce website with payment gateway, mobile app for delivery, cloud migration..."
+                  rows={3}
+                  required
+                  value={formData.buildRequirement}
+                  onChange={(e) => setFormData({ ...formData, buildRequirement: e.target.value })}
+                  className="bg-slate-900/50 border-cyan-500/20 focus:border-cyan-500/60 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 resize-none text-sm sm:text-base"
+                />
+                <p className="text-[11px] text-slate-500 mt-1.5">Min 10 characters — sent as *What to Build* on WhatsApp.</p>
+              </div>
+
+              <div>
+                <label className="block text-xs sm:text-sm font-medium text-white mb-2">Estimated Budget</label>
+                <Select value={formData.budget} onValueChange={(v) => setFormData({ ...formData, budget: v })}>
+                  <SelectTrigger className="bg-slate-900/50 border-cyan-500/20 text-white text-sm sm:text-base">
+                    <SelectValue placeholder="Select budget (optional)" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {budgetOptions.map((b) => (
+                      <SelectItem key={b} value={b}>
+                        {b}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
               <div>
                 <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-white mb-2">
-                  Message *
+                  Additional Details *
                 </label>
                 <Textarea
                   id="message"
-                  placeholder="Tell us about your project..."
-                  rows={5}
+                  placeholder="Timeline, features, reference links..."
+                  rows={4}
                   required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="bg-slate-900/50 border-cyan-500/20 focus:border-cyan-500/60 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 resize-none text-sm sm:text-base"
                 />
-                <p className="text-[11px] text-slate-500 mt-1.5">Min 10 characters — this will be sent to WhatsApp bot.</p>
               </div>
 
               {result && (
@@ -197,12 +277,12 @@ export function Contact() {
                   </>
                 ) : (
                   <>
-                    Send Message
+                    Send to WhatsApp Bot
                     <Send className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                   </>
                 )}
               </Button>
-              <p className="text-center text-[11px] text-slate-500">Bot → WhatsApp +977 9801024024 • Encrypted</p>
+              <p className="text-center text-[11px] text-slate-500">Services + Build Details → WhatsApp +977 9801024024 • Encrypted</p>
             </form>
           </div>
         </div>

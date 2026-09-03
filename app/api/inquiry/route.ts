@@ -7,7 +7,10 @@ function formatWhatsAppMessage(data: {
   name: string
   email: string
   organization?: string
+  services: string[]
+  buildRequirement: string
   message: string
+  budget?: string
 }) {
   const lines = [
     `*New Inquiry — The Dime Technology* 🚀`,
@@ -16,10 +19,17 @@ function formatWhatsAppMessage(data: {
     `*Email:* ${data.email}`,
     `*Organization:* ${data.organization || "—"}`,
     ``,
-    `*Message:*`,
-    data.message,
+    `*Services Interested:*`,
+    data.services.map((s) => `  • ${s}`).join("\n"),
     ``,
-    `— Sent from thedimetechnology.com.np contact bot`,
+    `*What to Build:*`,
+    data.buildRequirement,
+    ``,
+    `*Additional Details:*`,
+    data.message,
+    ...(data.budget ? [``, `*Budget:* ${data.budget}`] : []),
+    ``,
+    `— Sent via site bot → WhatsApp +9779801024024`,
     `Time: ${new Date().toLocaleString("en-NP", { timeZone: "Asia/Kathmandu" })}`,
   ]
   return lines.join("\n")
@@ -91,7 +101,7 @@ async function sendViaCallMeBot(message: string) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    const { name, email, organization, message } = body || {}
+    const { name, email, organization, message, services, buildRequirement, budget } = body || {}
 
     // basic validation
     if (!name || typeof name !== "string" || name.trim().length < 2) {
@@ -99,6 +109,12 @@ export async function POST(req: NextRequest) {
     }
     if (!email || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       return NextResponse.json({ error: "Valid email is required" }, { status: 400 })
+    }
+    if (!Array.isArray(services) || services.length === 0) {
+      return NextResponse.json({ error: "Select at least one service" }, { status: 400 })
+    }
+    if (!buildRequirement || typeof buildRequirement !== "string" || buildRequirement.trim().length < 10) {
+      return NextResponse.json({ error: "Describe what you want us to build (min 10 chars)" }, { status: 400 })
     }
     if (!message || typeof message !== "string" || message.trim().length < 10) {
       return NextResponse.json({ error: "Message is required (min 10 chars)" }, { status: 400 })
@@ -108,8 +124,11 @@ export async function POST(req: NextRequest) {
       name: name.trim(),
       email: email.trim().toLowerCase(),
       organization: (organization || "").trim(),
+      services: services.map((s: any) => String(s).trim()).filter(Boolean),
+      buildRequirement: buildRequirement.trim(),
       message: message.trim(),
-    }
+      budget: (budget || "").trim(),
+    } as any
 
     const waMessage = formatWhatsAppMessage(clean)
     const waLink = `https://wa.me/${WHATSAPP_TO}?text=${encodeURIComponent(waMessage)}`

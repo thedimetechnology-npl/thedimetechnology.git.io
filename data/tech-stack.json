@@ -1,0 +1,367 @@
+{
+  "sectionTitle": "Our Tech Stack",
+  "sectionSubtitle": "We work with a wide range of cutting-edge technologies to deliver the best solutions for your needs.",
+  "categories": [
+    {
+      "name": "Languages",
+      "items": [
+        "PHP",
+        "Java",
+        "Python",
+        ".NET",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Full-Stack",
+      "items": [
+        "MERN",
+        "MEAN",
+        "MEVN",
+        "JAMstack",
+        "Next.js",
+        "Nuxt.js"
+      ]
+    },
+    {
+      "name": "Mobile",
+      "items": [
+        "React Native",
+        "Flutter",
+        "Xamarin",
+        "Cordova",
+        "iOS",
+        "Android"
+      ]
+    },
+    {
+      "name": "E-commerce & CMS",
+      "items": [
+        "Shopify",
+        "WooCommerce",
+        "Moodle",
+        "WordPress",
+        "Strapi",
+        "Sanity"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "items": [
+        "DevOps",
+        "AWS",
+        "Azure",
+        "Docker",
+        "Kubernetes",
+        "CI/CD"
+      ]
+    },
+    {
+      "name": "Security",
+      "items": [
+        "Cyber Security",
+        "Network Security",
+        "Cisco",
+        "Juniper",
+        "Penetration Testing",
+        "Compliance"
+      ]
+    }
+  ],
+  "summary": {
+    "technologies": "30+",
+    "projects": "50+",
+    "experience": "10+"
+  },
+  "techColors": {
+    "PHP": {
+      "icon": "text-[#777BB4]",
+      "bg": "from-[#777BB4]/20 to-[#8892BF]/20",
+      "bgHover": "group-hover:from-[#777BB4]/30 group-hover:to-[#8892BF]/30",
+      "shadow": "hover:shadow-[#777BB4]/10",
+      "border": "border-[#777BB4]/20",
+      "borderHover": "hover:border-[#777BB4]/40"
+    },
+    "Java": {
+      "icon": "text-[#f89820]",
+      "bg": "from-[#f89820]/20 to-[#5382a1]/20",
+      "bgHover": "group-hover:from-[#f89820]/30 group-hover:to-[#5382a1]/30",
+      "shadow": "hover:shadow-[#f89820]/10",
+      "border": "border-[#f89820]/20",
+      "borderHover": "hover:border-[#f89820]/40"
+    },
+    "Python": {
+      "icon": "text-[#3776AB]",
+      "bg": "from-[#3776AB]/20 to-[#FFD43B]/20",
+      "bgHover": "group-hover:from-[#3776AB]/30 group-hover:to-[#FFD43B]/30",
+      "shadow": "hover:shadow-[#3776AB]/10",
+      "border": "border-[#3776AB]/20",
+      "borderHover": "hover:border-[#3776AB]/40"
+    },
+    ".NET": {
+      "icon": "text-[#512BD4]",
+      "bg": "from-[#512BD4]/20 to-[#7B3FF2]/20",
+      "bgHover": "group-hover:from-[#512BD4]/30 group-hover:to-[#7B3FF2]/30",
+      "shadow": "hover:shadow-[#512BD4]/10",
+      "border": "border-[#512BD4]/20",
+      "borderHover": "hover:border-[#512BD4]/40"
+    },
+    "JavaScript": {
+      "icon": "text-[#F7DF1E]",
+      "bg": "from-[#F7DF1E]/20 to-[#F0DB4F]/20",
+      "bgHover": "group-hover:from-[#F7DF1E]/30 group-hover:to-[#F0DB4F]/30",
+      "shadow": "hover:shadow-[#F7DF1E]/10",
+      "border": "border-[#F7DF1E]/20",
+      "borderHover": "hover:border-[#F7DF1E]/40"
+    },
+    "TypeScript": {
+      "icon": "text-[#3178C6]",
+      "bg": "from-[#3178C6]/20 to-[#235A97]/20",
+      "bgHover": "group-hover:from-[#3178C6]/30 group-hover:to-[#235A97]/30",
+      "shadow": "hover:shadow-[#3178C6]/10",
+      "border": "border-[#3178C6]/20",
+      "borderHover": "hover:border-[#3178C6]/40"
+    },
+    "MERN": {
+      "icon": "text-[#47A248]",
+      "bg": "from-[#47A248]/20 to-[#61DAFB]/20",
+      "bgHover": "group-hover:from-[#47A248]/30 group-hover:to-[#61DAFB]/30",
+      "shadow": "hover:shadow-[#47A248]/10",
+      "border": "border-[#47A248]/20",
+      "borderHover": "hover:border-[#47A248]/40"
+    },
+    "MEAN": {
+      "icon": "text-[#DD0031]",
+      "bg": "from-[#DD0031]/20 to-[#47A248]/20",
+      "bgHover": "group-hover:from-[#DD0031]/30 group-hover:to-[#47A248]/30",
+      "shadow": "hover:shadow-[#DD0031]/10",
+      "border": "border-[#DD0031]/20",
+      "borderHover": "hover:border-[#DD0031]/40"
+    },
+    "MEVN": {
+      "icon": "text-[#42B883]",
+      "bg": "from-[#42B883]/20 to-[#35495E]/20",
+      "bgHover": "group-hover:from-[#42B883]/30 group-hover:to-[#35495E]/30",
+      "shadow": "hover:shadow-[#42B883]/10",
+      "border": "border-[#42B883]/20",
+      "borderHover": "hover:border-[#42B883]/40"
+    },
+    "JAMstack": {
+      "icon": "text-[#F0047F]",
+      "bg": "from-[#F0047F]/20 to-[#00C7B7]/20",
+      "bgHover": "group-hover:from-[#F0047F]/30 group-hover:to-[#00C7B7]/30",
+      "shadow": "hover:shadow-[#F0047F]/10",
+      "border": "border-[#F0047F]/20",
+      "borderHover": "hover:border-[#F0047F]/40"
+    },
+    "Next.js": {
+      "icon": "text-white",
+      "bg": "from-gray-800/20 to-black/20",
+      "bgHover": "group-hover:from-gray-800/30 group-hover:to-black/30",
+      "shadow": "hover:shadow-gray-500/10",
+      "border": "border-gray-500/20",
+      "borderHover": "hover:border-gray-500/40"
+    },
+    "Nuxt.js": {
+      "icon": "text-[#00DC82]",
+      "bg": "from-[#00DC82]/20 to-[#00BD6F]/20",
+      "bgHover": "group-hover:from-[#00DC82]/30 group-hover:to-[#00BD6F]/30",
+      "shadow": "hover:shadow-[#00DC82]/10",
+      "border": "border-[#00DC82]/20",
+      "borderHover": "hover:border-[#00DC82]/40"
+    },
+    "React Native": {
+      "icon": "text-[#61DAFB]",
+      "bg": "from-[#61DAFB]/20 to-[#20232A]/20",
+      "bgHover": "group-hover:from-[#61DAFB]/30 group-hover:to-[#20232A]/30",
+      "shadow": "hover:shadow-[#61DAFB]/10",
+      "border": "border-[#61DAFB]/20",
+      "borderHover": "hover:border-[#61DAFB]/40"
+    },
+    "Flutter": {
+      "icon": "text-[#02569B]",
+      "bg": "from-[#02569B]/20 to-[#13B9FD]/20",
+      "bgHover": "group-hover:from-[#02569B]/30 group-hover:to-[#13B9FD]/30",
+      "shadow": "hover:shadow-[#02569B]/10",
+      "border": "border-[#02569B]/20",
+      "borderHover": "hover:border-[#02569B]/40"
+    },
+    "Xamarin": {
+      "icon": "text-[#3498DB]",
+      "bg": "from-[#3498DB]/20 to-[#2C3E50]/20",
+      "bgHover": "group-hover:from-[#3498DB]/30 group-hover:to-[#2C3E50]/30",
+      "shadow": "hover:shadow-[#3498DB]/10",
+      "border": "border-[#3498DB]/20",
+      "borderHover": "hover:border-[#3498DB]/40"
+    },
+    "Cordova": {
+      "icon": "text-[#E8E8E8]",
+      "bg": "from-gray-400/20 to-gray-600/20",
+      "bgHover": "group-hover:from-gray-400/30 group-hover:to-gray-600/30",
+      "shadow": "hover:shadow-gray-400/10",
+      "border": "border-gray-400/20",
+      "borderHover": "hover:border-gray-400/40"
+    },
+    "iOS": {
+      "icon": "text-[#000000]",
+      "bg": "from-gray-800/20 to-gray-900/20",
+      "bgHover": "group-hover:from-gray-800/30 group-hover:to-gray-900/30",
+      "shadow": "hover:shadow-gray-800/10",
+      "border": "border-gray-600/20",
+      "borderHover": "hover:border-gray-600/40"
+    },
+    "Android": {
+      "icon": "text-[#3DDC84]",
+      "bg": "from-[#3DDC84]/20 to-[#A4C639]/20",
+      "bgHover": "group-hover:from-[#3DDC84]/30 group-hover:to-[#A4C639]/30",
+      "shadow": "hover:shadow-[#3DDC84]/10",
+      "border": "border-[#3DDC84]/20",
+      "borderHover": "hover:border-[#3DDC84]/40"
+    },
+    "Shopify": {
+      "icon": "text-[#96BF48]",
+      "bg": "from-[#96BF48]/20 to-[#7AB55C]/20",
+      "bgHover": "group-hover:from-[#96BF48]/30 group-hover:to-[#7AB55C]/30",
+      "shadow": "hover:shadow-[#96BF48]/10",
+      "border": "border-[#96BF48]/20",
+      "borderHover": "hover:border-[#96BF48]/40"
+    },
+    "WooCommerce": {
+      "icon": "text-[#96588A]",
+      "bg": "from-[#96588A]/20 to-[#7F4A7A]/20",
+      "bgHover": "group-hover:from-[#96588A]/30 group-hover:to-[#7F4A7A]/30",
+      "shadow": "hover:shadow-[#96588A]/10",
+      "border": "border-[#96588A]/20",
+      "borderHover": "hover:border-[#96588A]/40"
+    },
+    "Moodle": {
+      "icon": "text-[#F98012]",
+      "bg": "from-[#F98012]/20 to-[#F9A03F]/20",
+      "bgHover": "group-hover:from-[#F98012]/30 group-hover:to-[#F9A03F]/30",
+      "shadow": "hover:shadow-[#F98012]/10",
+      "border": "border-[#F98012]/20",
+      "borderHover": "hover:border-[#F98012]/40"
+    },
+    "WordPress": {
+      "icon": "text-[#21759B]",
+      "bg": "from-[#21759B]/20 to-[#464646]/20",
+      "bgHover": "group-hover:from-[#21759B]/30 group-hover:to-[#464646]/30",
+      "shadow": "hover:shadow-[#21759B]/10",
+      "border": "border-[#21759B]/20",
+      "borderHover": "hover:border-[#21759B]/40"
+    },
+    "Strapi": {
+      "icon": "text-[#2F2E8B]",
+      "bg": "from-[#2F2E8B]/20 to-[#8E75FF]/20",
+      "bgHover": "group-hover:from-[#2F2E8B]/30 group-hover:to-[#8E75FF]/30",
+      "shadow": "hover:shadow-[#2F2E8B]/10",
+      "border": "border-[#2F2E8B]/20",
+      "borderHover": "hover:border-[#2F2E8B]/40"
+    },
+    "Sanity": {
+      "icon": "text-[#F03E2F]",
+      "bg": "from-[#F03E2F]/20 to-[#F9B1AA]/20",
+      "bgHover": "group-hover:from-[#F03E2F]/30 group-hover:to-[#F9B1AA]/30",
+      "shadow": "hover:shadow-[#F03E2F]/10",
+      "border": "border-[#F03E2F]/20",
+      "borderHover": "hover:border-[#F03E2F]/40"
+    },
+    "DevOps": {
+      "icon": "text-[#2496ED]",
+      "bg": "from-[#2496ED]/20 to-[#0DB7ED]/20",
+      "bgHover": "group-hover:from-[#2496ED]/30 group-hover:to-[#0DB7ED]/30",
+      "shadow": "hover:shadow-[#2496ED]/10",
+      "border": "border-[#2496ED]/20",
+      "borderHover": "hover:border-[#2496ED]/40"
+    },
+    "AWS": {
+      "icon": "text-[#FF9900]",
+      "bg": "from-[#FF9900]/20 to-[#232F3E]/20",
+      "bgHover": "group-hover:from-[#FF9900]/30 group-hover:to-[#232F3E]/30",
+      "shadow": "hover:shadow-[#FF9900]/10",
+      "border": "border-[#FF9900]/20",
+      "borderHover": "hover:border-[#FF9900]/40"
+    },
+    "Azure": {
+      "icon": "text-[#0078D4]",
+      "bg": "from-[#0078D4]/20 to-[#50E6FF]/20",
+      "bgHover": "group-hover:from-[#0078D4]/30 group-hover:to-[#50E6FF]/30",
+      "shadow": "hover:shadow-[#0078D4]/10",
+      "border": "border-[#0078D4]/20",
+      "borderHover": "hover:border-[#0078D4]/40"
+    },
+    "Docker": {
+      "icon": "text-[#2496ED]",
+      "bg": "from-[#2496ED]/20 to-[#0DB7ED]/20",
+      "bgHover": "group-hover:from-[#2496ED]/30 group-hover:to-[#0DB7ED]/30",
+      "shadow": "hover:shadow-[#2496ED]/10",
+      "border": "border-[#2496ED]/20",
+      "borderHover": "hover:border-[#2496ED]/40"
+    },
+    "Kubernetes": {
+      "icon": "text-[#326CE5]",
+      "bg": "from-[#326CE5]/20 to-[#3371E3]/20",
+      "bgHover": "group-hover:from-[#326CE5]/30 group-hover:to-[#3371E3]/30",
+      "shadow": "hover:shadow-[#326CE5]/10",
+      "border": "border-[#326CE5]/20",
+      "borderHover": "hover:border-[#326CE5]/40"
+    },
+    "CI/CD": {
+      "icon": "text-[#2088FF]",
+      "bg": "from-[#2088FF]/20 to-[#79B8FF]/20",
+      "bgHover": "group-hover:from-[#2088FF]/30 group-hover:to-[#79B8FF]/30",
+      "shadow": "hover:shadow-[#2088FF]/10",
+      "border": "border-[#2088FF]/20",
+      "borderHover": "hover:border-[#2088FF]/40"
+    },
+    "Cyber Security": {
+      "icon": "text-[#00A4EF]",
+      "bg": "from-[#00A4EF]/20 to-[#0078D4]/20",
+      "bgHover": "group-hover:from-[#00A4EF]/30 group-hover:to-[#0078D4]/30",
+      "shadow": "hover:shadow-[#00A4EF]/10",
+      "border": "border-[#00A4EF]/20",
+      "borderHover": "hover:border-[#00A4EF]/40"
+    },
+    "Network Security": {
+      "icon": "text-[#FF6B6B]",
+      "bg": "from-[#FF6B6B]/20 to-[#EE5A52]/20",
+      "bgHover": "group-hover:from-[#FF6B6B]/30 group-hover:to-[#EE5A52]/30",
+      "shadow": "hover:shadow-[#FF6B6B]/10",
+      "border": "border-[#FF6B6B]/20",
+      "borderHover": "hover:border-[#FF6B6B]/40"
+    },
+    "Cisco": {
+      "icon": "text-[#1BA0D7]",
+      "bg": "from-[#1BA0D7]/20 to-[#049FD9]/20",
+      "bgHover": "group-hover:from-[#1BA0D7]/30 group-hover:to-[#049FD9]/30",
+      "shadow": "hover:shadow-[#1BA0D7]/10",
+      "border": "border-[#1BA0D7]/20",
+      "borderHover": "hover:border-[#1BA0D7]/40"
+    },
+    "Juniper": {
+      "icon": "text-[#84BD00]",
+      "bg": "from-[#84BD00]/20 to-[#6FA000]/20",
+      "bgHover": "group-hover:from-[#84BD00]/30 group-hover:to-[#6FA000]/30",
+      "shadow": "hover:shadow-[#84BD00]/10",
+      "border": "border-[#84BD00]/20",
+      "borderHover": "hover:border-[#84BD00]/40"
+    },
+    "Penetration Testing": {
+      "icon": "text-[#DC143C]",
+      "bg": "from-[#DC143C]/20 to-[#B91E3C]/20",
+      "bgHover": "group-hover:from-[#DC143C]/30 group-hover:to-[#B91E3C]/30",
+      "shadow": "hover:shadow-[#DC143C]/10",
+      "border": "border-[#DC143C]/20",
+      "borderHover": "hover:border-[#DC143C]/40"
+    },
+    "Compliance": {
+      "icon": "text-[#10B981]",
+      "bg": "from-[#10B981]/20 to-[#059669]/20",
+      "bgHover": "group-hover:from-[#10B981]/30 group-hover:to-[#059669]/30",
+      "shadow": "hover:shadow-[#10B981]/10",
+      "border": "border-[#10B981]/20",
+      "borderHover": "hover:border-[#10B981]/40"
+    }
+  }
+}

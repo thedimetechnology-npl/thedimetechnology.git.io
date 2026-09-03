@@ -1,0 +1,15 @@
+{
+  "badge": "Your Freelance Tech Partner",
+  "title": "Welcome to",
+  "titleHighlight": "The Dime Technology",
+  "description": "We are a collective of passionate technologists bound together by our deep tech knowledge, human-centric mindset, and a passion for using technology and digital solutions to drive business transformation.",
+  "primaryCTA": {
+    "text": "Let's Work Together",
+    "href": "https://www.truelancer.com/freelancer/shahidalam7"
+  },
+  "secondaryCTA": {
+    "text": "Watch Video",
+    "href": "/assets/img/video/shahid.mp4"
+  },
+  "image": "/assets/img/hero-img.svg"
+}

@@ -1,0 +1,9 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Disallow admin or private areas if any
+# Disallow: /admin/
+# Disallow: /_next/
+
+Sitemap: https://thedimetechnology.com/sitemap.xml

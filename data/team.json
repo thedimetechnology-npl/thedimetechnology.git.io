@@ -1,0 +1,74 @@
+[
+  {
+    "name": "ASP.NET",
+    "role": "Developer",
+    "image": "/assets/img/team/roman.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
+  },
+  {
+    "name": "Java",
+    "role": "Developer",
+    "image": "/assets/img/team/josheph.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
+  },
+  {
+    "name": "Mobile App",
+    "role": "Developer",
+    "image": "/assets/img/team/bibek.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
+  },
+  {
+    "name": "Cyber Security",
+    "role": "Engineer",
+    "image": "/assets/img/team/pratik.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
+  },
+  {
+    "name": "Network Security",
+    "role": "Engineer",
+    "image": "/assets/img/team/susant.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
+  },
+  {
+    "name": "Shahid",
+    "role": "Founder",
+    "image": "/assets/img/team/shahid.jpg",
+    "linkedin": "https://www.linkedin.com/in/shahidalam-nepal/",
+    "github": "https://github.com/azhashmi",
+    "email": "afrozhashmi@hotmail.com",
+    "website": "https://www.shahidalam.com.np/"
+  },
+  {
+    "name": "WordPress",
+    "role": "Developer",
+    "image": "/assets/img/team/balkrishna.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
+  },
+  {
+    "name": "Full-Stack",
+    "role": "Developer",
+    "image": "/assets/img/team/roshan.jpg",
+    "linkedin": "#",
+    "github": "#",
+    "email": "#",
+    "website": "#"
+  }
+]

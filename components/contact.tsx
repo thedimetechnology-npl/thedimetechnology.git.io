@@ -2,7 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
-import { MapPin, Phone, Mail, Clock, Send, Sparkles } from "lucide-react"
+import { MapPin, Phone, Mail, Clock, Send, Sparkles, CheckCircle2, AlertCircle, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -15,10 +15,35 @@ export function Contact() {
     organization: "",
     message: "",
   })
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState<{ type: "success" | "error"; text: string; waLink?: string } | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
+    setResult(null)
+    setLoading(true)
+    try {
+      const res = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      const data = await res.json()
+      if (!res.ok) throw new Error(data.error || "Failed to send inquiry")
+
+      setResult({
+        type: "success",
+        text: data.demo
+          ? "Inquiry received! Owner will get WhatsApp after you configure bot (demo mode active)."
+          : "Inquiry sent! Owner got your message on WhatsApp +977 9801024024 ✅",
+        waLink: data.waLink,
+      })
+      setFormData({ name: "", email: "", organization: "", message: "" })
+    } catch (err: any) {
+      setResult({ type: "error", text: err.message || "Could not send inquiry. Try again." })
+    } finally {
+      setLoading(false)
+    }
   }
 
   const contactItems = [
@@ -56,6 +81,19 @@ export function Contact() {
                 </div>
               ))}
             </div>
+
+            {/* Bot info */}
+            <div className="mt-8 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex gap-3">
+              <div className="w-9 h-9 rounded-xl bg-emerald-500 flex items-center justify-center flex-shrink-0">
+                <Send className="h-4 w-4 text-white" />
+              </div>
+              <div>
+                <p className="text-emerald-300 text-sm font-semibold">WhatsApp Bot Active</p>
+                <p className="text-emerald-200/70 text-xs leading-relaxed mt-1">
+                  Every inquiry is instantly forwarded to owner WhatsApp <span className="text-white font-bold">+977 9801024024</span> via bot. No floating logo needed.
+                </p>
+              </div>
+            </div>
           </div>
 
           {/* Contact Form */}
@@ -71,11 +109,12 @@ export function Contact() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-white mb-2">
-                    Full Name
+                    Full Name *
                   </label>
                   <Input
                     id="name"
                     placeholder="John Doe"
+                    required
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="bg-slate-900/50 border-cyan-500/20 focus:border-cyan-500/60 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 text-sm sm:text-base"
@@ -83,12 +122,13 @@ export function Contact() {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-white mb-2">
-                    Email
+                    Email *
                   </label>
                   <Input
                     id="email"
                     type="email"
                     placeholder="john@company.com"
+                    required
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="bg-slate-900/50 border-cyan-500/20 focus:border-cyan-500/60 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 text-sm sm:text-base"
@@ -111,25 +151,58 @@ export function Contact() {
 
               <div>
                 <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-white mb-2">
-                  Message
+                  Message *
                 </label>
                 <Textarea
                   id="message"
                   placeholder="Tell us about your project..."
                   rows={5}
+                  required
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="bg-slate-900/50 border-cyan-500/20 focus:border-cyan-500/60 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 resize-none text-sm sm:text-base"
                 />
+                <p className="text-[11px] text-slate-500 mt-1.5">Min 10 characters — this will be sent to WhatsApp bot.</p>
               </div>
+
+              {result && (
+                <div
+                  className={`flex gap-3 p-3 rounded-xl border text-sm leading-relaxed ${result.type === "success" ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-200" : "bg-red-500/10 border-red-500/20 text-red-200"}`}
+                >
+                  {result.type === "success" ? (
+                    <CheckCircle2 className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  ) : (
+                    <AlertCircle className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
+                  )}
+                  <div className="flex-1">
+                    <p>{result.text}</p>
+                    {result.waLink && result.type === "success" && (
+                      <a href={result.waLink} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 mt-2 text-xs font-bold bg-white text-emerald-700 px-3 py-1 rounded-full hover:bg-emerald-50 transition-colors">
+                        View WhatsApp preview ↗
+                      </a>
+                    )}
+                  </div>
+                </div>
+              )}
 
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-semibold h-12 sm:h-14 text-sm sm:text-base shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-[1.02]"
+                disabled={loading}
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-semibold h-12 sm:h-14 text-sm sm:text-base shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-[1.02] disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                Send Message
-                <Send className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                {loading ? (
+                  <>
+                    <Loader2 className="h-4 w-4 sm:h-5 sm:w-5 animate-spin" />
+                    Sending to WhatsApp Bot...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                  </>
+                )}
               </Button>
+              <p className="text-center text-[11px] text-slate-500">Bot → WhatsApp +977 9801024024 • Encrypted</p>
             </form>
           </div>
         </div>

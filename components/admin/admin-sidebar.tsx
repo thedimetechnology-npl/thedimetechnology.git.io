@@ -18,6 +18,7 @@ import {
   Mail,
   LogOut,
   Home,
+  FileText,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -33,6 +34,7 @@ const navItems = [
   { href: "/admin/testimonials", label: "Testimonials", icon: MessageSquareQuote },
   { href: "/admin/clients", label: "Clients", icon: Handshake },
   { href: "/admin/tech-stack", label: "Tech Stack", icon: Cpu },
+  { href: "/admin/blogs", label: "Blogs", icon: FileText },
   { href: "/admin/messages", label: "Messages", icon: Mail },
 ]
 

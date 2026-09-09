@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Settings, Zap, Info, Briefcase, Workflow, BarChart3, Users, MessageSquareQuote, Handshake, Cpu, Mail, ArrowRight } from "lucide-react"
+import { Settings, Zap, Info, Briefcase, Workflow, BarChart3, Users, MessageSquareQuote, Handshake, Cpu, Mail, ArrowRight, FileText } from "lucide-react"
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
 
 const cards = [
@@ -13,6 +13,7 @@ const cards = [
   { href: "/admin/testimonials", label: "Testimonials", desc: "Client feedback", icon: MessageSquareQuote, color: "from-yellow-500 to-amber-500" },
   { href: "/admin/clients", label: "Clients", desc: "Trusted logos", icon: Handshake, color: "from-green-500 to-emerald-500" },
   { href: "/admin/tech-stack", label: "Tech Stack", desc: "Categories & colors", icon: Cpu, color: "from-red-500 to-orange-500" },
+  { href: "/admin/blogs", label: "Blogs", desc: "SEO blog & portfolio", icon: FileText, color: "from-teal-500 to-cyan-500" },
   { href: "/admin/messages", label: "Messages", desc: "Contact inquiries", icon: Mail, color: "from-slate-600 to-slate-800" },
 ]
 

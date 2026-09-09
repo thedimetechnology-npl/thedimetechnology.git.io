@@ -47,6 +47,10 @@
       "label": "Technologies"
     },
     {
+      "href": "/blog",
+      "label": "Blog"
+    },
+    {
       "href": "#contact",
       "label": "Contact"
     }

@@ -31,7 +31,7 @@ export default function TestimonialsAdmin() {
     <div>
       <AdminHeader title="Testimonials" description={`${data.length} entries`} saving={saving} onSave={save} />
       <div className="flex justify-end mb-4">
-        <Button variant="outline" onClick={() => setData([...data, { name: "", location: "", rating: 5, feedback: "", image: "/assets/img/testimonials/", company: "", designation: "" }])} className="border-slate-700 text-white"><Plus className="h-4 w-4 mr-2" />Add Testimonial</Button>
+        <Button variant="outline" onClick={() => setData([{ name: "", location: "", rating: 5, feedback: "", image: "/assets/img/testimonials/", company: "", designation: "" }, ...data])} className="border-slate-700 text-white"><Plus className="h-4 w-4 mr-2" />Add Testimonial (new on top)</Button>
       </div>
       <div className="grid gap-4">
         {data.map((t, i) => (

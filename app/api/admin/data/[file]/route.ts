@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
 import { getSession } from "@/lib/auth"
-import { isAllowedFile, readDataFile, writeDataFile, ALLOWED_FILES } from "@/lib/admin-data"
+import { isAllowedFile, readDataFileAsync, writeDataFileAsync, ALLOWED_FILES } from "@/lib/admin-data"
 
 import siteConfig from "@/data/site-config.json"
 import hero from "@/data/hero.json"
@@ -38,7 +38,7 @@ export async function GET(req: NextRequest, { params }: Params) {
     return NextResponse.json({ error: `Invalid file. Allowed: ${ALLOWED_FILES.join(", ")}` }, { status: 400 })
   }
   try {
-    const data = readDataFile(file)
+    const data = await readDataFileAsync(file)
     return NextResponse.json(data)
   } catch {
     const fb = fallbackMap[file]
@@ -56,7 +56,7 @@ export async function PUT(req: NextRequest, { params }: Params) {
   }
   try {
     const body = await req.json()
-    writeDataFile(file, body)
+    await writeDataFileAsync(file, body)
     return NextResponse.json({ success: true })
   } catch (e) {
     return NextResponse.json({ error: "Failed to write file" }, { status: 500 })

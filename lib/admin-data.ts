@@ -38,6 +38,26 @@ export function writeDataFile(file: AllowedFile, data: unknown) {
   fs.writeFileSync(full, JSON.stringify(data, null, 2) + "\n", "utf-8")
 }
 
+// Async D1-aware versions for Workers (fallback to fs locally)
+export async function readDataFileAsync(file: AllowedFile): Promise<any> {
+  try {
+    const { d1Get } = await import("./d1")
+    const v = await d1Get(file)
+    if (v !== null) return v
+  } catch {}
+  // fallback to fs
+  return readDataFile(file)
+}
+
+export async function writeDataFileAsync(file: AllowedFile, data: unknown): Promise<void> {
+  try {
+    const { d1Put } = await import("./d1")
+    const ok = await d1Put(file, data)
+    if (ok) return
+  } catch {}
+  writeDataFile(file, data)
+}
+
 // messages handling (contact form)
 export type ContactMessage = {
   id: string

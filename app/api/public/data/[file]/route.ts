@@ -32,6 +32,12 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ file
   if (!isAllowedFile(file)) {
     return NextResponse.json({ error: `Invalid file. Allowed: ${ALLOWED_FILES.join(", ")}` }, { status: 400 })
   }
+  // Try D1 first (live), fallback to static bundled
+  try {
+    const { d1Get } = await import("@/lib/d1")
+    const v = await d1Get(file)
+    if (v !== null) return NextResponse.json(v, { headers: { "Cache-Control": "no-store" } })
+  } catch {}
   const data = dataMap[file]
   if (data === undefined) return NextResponse.json({ error: "Not found" }, { status: 404 })
   return NextResponse.json(data, { headers: { "Cache-Control": "no-store" } })

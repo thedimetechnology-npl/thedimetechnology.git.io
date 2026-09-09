@@ -3,6 +3,19 @@ import { getSession } from "@/lib/auth"
 import fs from "fs"
 import path from "path"
 
+function getR2(): any {
+  try {
+    // @ts-ignore - Cloudflare bindings
+    if (typeof process !== "undefined" && (process.env as any).R2) return (process.env as any).R2
+    // @ts-ignore
+    const g: any = globalThis
+    if (g?.R2) return g.R2
+    if (g?.__cloudflare_context__?.env?.R2) return g.__cloudflare_context__.env.R2
+    if (g?.__env__?.R2) return g.__env__.R2
+  } catch {}
+  return null
+}
+
 export async function POST(req: NextRequest) {
   const session = await getSession()
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 })
@@ -30,15 +43,31 @@ export async function POST(req: NextRequest) {
   const unique = Date.now().toString(36) + "-" + Math.random().toString(36).slice(2, 6)
   const filename = `${base}-${unique}${ext}`
 
-  // folder inside public: e.g. uploads, assets/img/team, assets/img/testimonials, etc.
-  // whitelist folders to prevent path traversal
   const safeFolder = folder.replace(/[^a-zA-Z0-9/_\-]/g, "").replace(/^\/+/, "")
-  const targetDir = path.join(process.cwd(), "public", safeFolder)
-  if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true })
+  const r2Key = `${safeFolder}/${filename}`.replace(/\/+/g, "/")
 
-  const filePath = path.join(targetDir, filename)
-  fs.writeFileSync(filePath, buffer)
+  // Try R2 first (on Cloudflare Workers)
+  const R2 = getR2()
+  if (R2) {
+    try {
+      await R2.put(r2Key, buffer, { httpMetadata: { contentType: file.type } })
+      // Return R2-served URL via our API route
+      const publicPath = `/api/r2/${r2Key}`
+      return NextResponse.json({ success: true, url: publicPath, filename, storage: "r2" })
+    } catch (e: any) {
+      // fallback to fs
+    }
+  }
 
-  const publicPath = `/${safeFolder}/${filename}`.replace(/\/+/g, "/")
-  return NextResponse.json({ success: true, url: publicPath, filename })
+  // Fallback to filesystem (local dev)
+  try {
+    const targetDir = path.join(process.cwd(), "public", safeFolder)
+    if (!fs.existsSync(targetDir)) fs.mkdirSync(targetDir, { recursive: true })
+    const filePath = path.join(targetDir, filename)
+    fs.writeFileSync(filePath, buffer)
+    const publicPath = `/${safeFolder}/${filename}`.replace(/\/+/g, "/")
+    return NextResponse.json({ success: true, url: publicPath, filename, storage: "fs" })
+  } catch (e: any) {
+    return NextResponse.json({ error: "Failed to save file: " + e.message }, { status: 500 })
+  }
 }

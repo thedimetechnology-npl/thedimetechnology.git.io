@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "thedimetechnology-git-io",
+  "compatibility_date": "2026-09-08",
+  "observability": {
+    "enabled": true
+  },
+  "r2_buckets": [
+    {
+      "bucket_name": "dime-uploads",
+      "binding": "R2"
+    }
+  ]
+}

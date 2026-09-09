@@ -1,9 +1,10 @@
 "use client"
 
 import type React from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Facebook, Twitter, Instagram, Linkedin, Github, Heart } from "lucide-react"
-import siteConfig from "@/data/site-config.json"
+import fallbackConfig from "@/data/site-config.json"
 
 const socialIcons: Record<string, React.ComponentType<{ size?: number }>> = {
   facebook: Facebook,
@@ -14,6 +15,10 @@ const socialIcons: Record<string, React.ComponentType<{ size?: number }>> = {
 }
 
 export function Footer() {
+  const [siteConfig, setSiteConfig] = useState(fallbackConfig)
+  useEffect(() => {
+    fetch("/api/public/data/site-config.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setSiteConfig(j) }).catch(() => {})
+  }, [])
   return (
     <footer className="py-12 sm:py-16 px-4 sm:px-6 bg-slate-950 border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto">

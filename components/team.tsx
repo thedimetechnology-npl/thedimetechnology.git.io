@@ -1,10 +1,18 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { Linkedin, Github, Mail, Globe } from "lucide-react"
-import teamData from "@/data/team.json"
+import fallbackData from "@/data/team.json"
 
 export function Team() {
+  const [teamData, setTeamData] = useState(fallbackData)
+  useEffect(() => {
+    fetch("/api/public/data/team.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (Array.isArray(j) && j.length) setTeamData(j) })
+      .catch(() => {})
+  }, [])
   return (
     <section id="team" className="py-24 px-6 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
       <div className="max-w-7xl mx-auto">

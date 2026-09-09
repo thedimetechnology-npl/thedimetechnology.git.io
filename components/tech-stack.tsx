@@ -1,7 +1,7 @@
 "use client"
 
-import { useState } from "react"
-import techData from "@/data/tech-stack.json"
+import { useState, useEffect } from "react"
+import fallbackData from "@/data/tech-stack.json"
 import {
   Code2, Coffee, FileJson, Terminal, Braces, FileType,
   Boxes, Layers, Workflow, Zap, Globe, Cpu,
@@ -12,7 +12,11 @@ import {
 } from "lucide-react"
 
 export function TechStack() {
+  const [techData, setTechData] = useState(fallbackData)
   const [activeCategory, setActiveCategory] = useState(0)
+  useEffect(() => {
+    fetch("/api/public/data/tech-stack.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setTechData(j) }).catch(() => {})
+  }, [])
 
   // Icon mapping for technologies
   const techIcons: Record<string, any> = {

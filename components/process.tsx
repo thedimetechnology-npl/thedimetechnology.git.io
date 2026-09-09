@@ -1,8 +1,9 @@
 "use client"
 
 import type React from "react"
+import { useState, useEffect } from "react"
 import { MessageSquare, Pencil, Code2, CheckCircle } from "lucide-react"
-import processData from "@/data/process.json"
+import fallbackData from "@/data/process.json"
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   MessageSquare,
@@ -12,6 +13,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 }
 
 export function Process() {
+  const [processData, setProcessData] = useState(fallbackData)
+  useEffect(() => {
+    fetch("/api/public/data/process.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setProcessData(j) }).catch(() => {})
+  }, [])
   return (
     <section id="process" className="py-24 px-6 bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900">
       <div className="max-w-7xl mx-auto">

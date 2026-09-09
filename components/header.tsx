@@ -4,11 +4,15 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import siteConfig from "@/data/site-config.json"
+import fallbackConfig from "@/data/site-config.json"
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [siteConfig, setSiteConfig] = useState(fallbackConfig)
+  useEffect(() => {
+    fetch("/api/public/data/site-config.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setSiteConfig(j) }).catch(() => {})
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {

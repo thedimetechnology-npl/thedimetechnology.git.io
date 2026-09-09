@@ -1,11 +1,18 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Image from "next/image"
 import { CheckCircle, Play, Zap } from "lucide-react"
-import aboutData from "@/data/about.json"
-import siteConfig from "@/data/site-config.json"
+import fallbackAbout from "@/data/about.json"
+import fallbackSiteConfig from "@/data/site-config.json"
 
 export function About() {
+  const [aboutData, setAboutData] = useState(fallbackAbout)
+  const [siteConfig, setSiteConfig] = useState(fallbackSiteConfig)
+  useEffect(() => {
+    fetch("/api/public/data/about.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setAboutData(j) }).catch(() => {})
+    fetch("/api/public/data/site-config.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setSiteConfig(j) }).catch(() => {})
+  }, [])
   return (
     <section id="about" className="py-24 px-6 bg-slate-950">
       <div className="max-w-7xl mx-auto">

@@ -4,12 +4,21 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import testimonialsData from "@/data/testimonials.json"
+import fallbackData from "@/data/testimonials.json"
 
 export function Testimonials() {
+  const [testimonialsData, setTestimonialsData] = useState(fallbackData)
   const [currentIndex, setCurrentIndex] = useState(0)
   const [itemsPerView, setItemsPerView] = useState(3)
   const [direction, setDirection] = useState<'left' | 'right'>('right')
+
+  // Fetch live data from public API so admin edits appear without rebuild
+  useEffect(() => {
+    fetch("/api/public/data/testimonials.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (Array.isArray(j) && j.length) setTestimonialsData(j) })
+      .catch(() => {})
+  }, [])
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,6 +37,7 @@ export function Testimonials() {
   }, [])
 
   const maxIndex = Math.max(0, testimonialsData.length - itemsPerView)
+  useEffect(() => { setCurrentIndex((c) => Math.min(c, maxIndex)) }, [maxIndex])
 
   const next = () => {
     if (currentIndex < maxIndex) {

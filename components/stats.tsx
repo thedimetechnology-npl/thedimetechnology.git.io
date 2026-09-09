@@ -1,7 +1,8 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Image from "next/image"
-import statsData from "@/data/stats.json"
+import fallbackData from "@/data/stats.json"
 
 const gradients = [
   "from-cyan-400 to-blue-400",
@@ -11,6 +12,10 @@ const gradients = [
 ]
 
 export function Stats() {
+  const [statsData, setStatsData] = useState(fallbackData)
+  useEffect(() => {
+    fetch("/api/public/data/stats.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setStatsData(j) }).catch(() => {})
+  }, [])
   return (
     <section className="py-24 px-6 bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
       <div className="max-w-7xl mx-auto">

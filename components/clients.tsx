@@ -1,9 +1,17 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Image from "next/image"
-import clientsData from "@/data/clients.json"
+import fallbackData from "@/data/clients.json"
 
 export function Clients() {
+  const [clientsData, setClientsData] = useState(fallbackData)
+  useEffect(() => {
+    fetch("/api/public/data/clients.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (j && j.clients) setClientsData(j) })
+      .catch(() => {})
+  }, [])
   return (
     <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 bg-gradient-to-r from-slate-900 via-blue-950 to-slate-900">
       <div className="max-w-7xl mx-auto">

@@ -1,8 +1,9 @@
 "use client"
 
 import type React from "react"
+import { useState, useEffect } from "react"
 import { Code, Search, Users, Wrench, Rocket, Lightbulb, ArrowRight } from "lucide-react"
-import servicesData from "@/data/services.json"
+import fallbackData from "@/data/services.json"
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Code,
@@ -23,6 +24,13 @@ const gradients = [
 ]
 
 export function Services() {
+  const [servicesData, setServicesData] = useState(fallbackData)
+  useEffect(() => {
+    fetch("/api/public/data/services.json", { cache: "no-store" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => { if (j && j.services) setServicesData(j) })
+      .catch(() => {})
+  }, [])
   return (
     <section id="services" className="py-24 px-6 bg-gradient-to-b from-slate-900 to-slate-950">
       <div className="max-w-7xl mx-auto">

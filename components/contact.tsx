@@ -1,15 +1,19 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { MapPin, Phone, Mail, Clock, Send, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { CountrySelect, type Country } from "@/components/ui/country-select"
-import siteConfig from "@/data/site-config.json"
+import fallbackConfig from "@/data/site-config.json"
 
 export function Contact() {
+  const [siteConfig, setSiteConfig] = useState(fallbackConfig)
+  useEffect(() => {
+    fetch("/api/public/data/site-config.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setSiteConfig(j) }).catch(() => {})
+  }, [])
   const [formData, setFormData] = useState({
     name: "",
     email: "",

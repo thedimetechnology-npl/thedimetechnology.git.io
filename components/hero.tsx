@@ -1,15 +1,23 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { ArrowRight, Play, Sparkles, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
-import heroData from "@/data/hero.json"
-import processData from "@/data/process.json"
-import siteConfig from "@/data/site-config.json"
+import fallbackHero from "@/data/hero.json"
+import fallbackProcess from "@/data/process.json"
+import fallbackSiteConfig from "@/data/site-config.json"
 
 export function Hero() {
   const [isVideoOpen, setIsVideoOpen] = useState(false)
+  const [heroData, setHeroData] = useState(fallbackHero)
+  const [processData, setProcessData] = useState(fallbackProcess)
+  const [siteConfig, setSiteConfig] = useState(fallbackSiteConfig)
+  useEffect(() => {
+    fetch("/api/public/data/hero.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setHeroData(j) }).catch(() => {})
+    fetch("/api/public/data/process.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setProcessData(j) }).catch(() => {})
+    fetch("/api/public/data/site-config.json", { cache: "no-store" }).then((r) => r.ok ? r.json() : null).then((j) => { if (j) setSiteConfig(j) }).catch(() => {})
+  }, [])
 
   // Extract YouTube video ID from URL
   const getYouTubeId = (url: string) => {

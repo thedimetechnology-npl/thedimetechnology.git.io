@@ -9,15 +9,23 @@
     "author": "Shahid Alam",
     "date": "2026-08-10",
     "category": "Mobile App",
-    "tags": ["Flutter", "Mobile App", "Warehouse Management", "Android"],
-    "skills": ["Flutter", "Mobile App"],
-    "company": "Janafly",
-    "country": "Saudi Arabia",
+    "tags": [
+      "Flutter",
+      "Mobile App",
+      "Warehouse Management",
+      "Android"
+    ],
+    "skills": [
+      "Flutter",
+      "Mobile App"
+    ],
+    "company": "Kaem Software",
+    "country": "India",
     "featured": true,
     "published": true,
     "seoTitle": "Warehouse Management Android App Development | The Dime Technology",
     "seoDescription": "Flutter warehouse management app with role-based login, package scanning, reporting and WhatsApp notifications built by The Dime Technology.",
-    "readingTime": 4
+    "readingTime": 2
   },
   {
     "id": "app-web-mobile-zkteco",
@@ -29,8 +37,18 @@
     "author": "Shahid Alam",
     "date": "2026-08-12",
     "category": "Information and Security",
-    "tags": ["ZKTeco", "Node.JS", "Flutter", "Biometric", "Security"],
-    "skills": ["Web App", "Flutter", "Node.JS"],
+    "tags": [
+      "ZKTeco",
+      "Node.JS",
+      "Flutter",
+      "Biometric",
+      "Security"
+    ],
+    "skills": [
+      "Web App",
+      "Flutter",
+      "Node.JS"
+    ],
     "company": "Al Yousuf Motors",
     "country": "UAE",
     "featured": true,
@@ -49,8 +67,17 @@
     "author": "Shahid Alam",
     "date": "2026-08-08",
     "category": "Programming Language",
-    "tags": ["MSSQL", "PowerShell", "Database Automation", "DevOps"],
-    "skills": ["Microsoft SQL Server", "Database Backup", "Database Automation"],
+    "tags": [
+      "MSSQL",
+      "PowerShell",
+      "Database Automation",
+      "DevOps"
+    ],
+    "skills": [
+      "Microsoft SQL Server",
+      "Database Backup",
+      "Database Automation"
+    ],
     "company": "ATIT Solutionz",
     "country": "UAE",
     "featured": false,
@@ -69,8 +96,19 @@
     "author": "Shahid Alam",
     "date": "2026-08-15",
     "category": "Full-Stack",
-    "tags": ["ATS", "PHP", "Laravel", "Reporting", "Workflow"],
-    "skills": ["PHP", "Laravel", "React", "MySQL"],
+    "tags": [
+      "ATS",
+      "PHP",
+      "Laravel",
+      "Reporting",
+      "Workflow"
+    ],
+    "skills": [
+      "PHP",
+      "Laravel",
+      "React",
+      "MySQL"
+    ],
     "company": "Mazenet Solution",
     "country": "India",
     "featured": false,
@@ -89,8 +127,17 @@
     "author": "Shahid Alam",
     "date": "2026-08-05",
     "category": "Network and System",
-    "tags": ["Cisco", "MikroTik", "BGP", "Network Security"],
-    "skills": ["Network and System", "Cisco", "MikroTik"],
+    "tags": [
+      "Cisco",
+      "MikroTik",
+      "BGP",
+      "Network Security"
+    ],
+    "skills": [
+      "Network and System",
+      "Cisco",
+      "MikroTik"
+    ],
     "company": "ISP Network",
     "country": "Nepal",
     "featured": false,
@@ -109,8 +156,16 @@
     "author": "Shahid Alam",
     "date": "2026-08-03",
     "category": "Programming Language",
-    "tags": ["Python", "Automation", "Scraping", "Utilities"],
-    "skills": ["Python", "Utilities and Scripting"],
+    "tags": [
+      "Python",
+      "Automation",
+      "Scraping",
+      "Utilities"
+    ],
+    "skills": [
+      "Python",
+      "Utilities and Scripting"
+    ],
     "company": "Individual",
     "country": "USA",
     "featured": false,
@@ -129,8 +184,15 @@
     "author": "Shahid Alam",
     "date": "2026-08-02",
     "category": "Full-Stack",
-    "tags": ["Next.JS", "SharePro", "Bug Fix"],
-    "skills": ["Next.JS", "React"],
+    "tags": [
+      "Next.JS",
+      "SharePro",
+      "Bug Fix"
+    ],
+    "skills": [
+      "Next.JS",
+      "React"
+    ],
     "company": "SharePro",
     "country": "India",
     "featured": false,
@@ -149,8 +211,17 @@
     "author": "Shahid Alam",
     "date": "2026-04-15",
     "category": "Full-Stack",
-    "tags": ["Healthcare", "WordPress", "ATS", "Recruitment"],
-    "skills": ["WordPress", "PHP", "Full-Stack"],
+    "tags": [
+      "Healthcare",
+      "WordPress",
+      "ATS",
+      "Recruitment"
+    ],
+    "skills": [
+      "WordPress",
+      "PHP",
+      "Full-Stack"
+    ],
     "company": "Clinical Talent Australia",
     "country": "Australia",
     "featured": true,

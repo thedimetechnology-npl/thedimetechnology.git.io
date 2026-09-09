@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { ArrowRight, Play, Sparkles, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogClose } from "@/components/ui/dialog"
@@ -83,17 +82,27 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Right Content - Hero Image */}
+          {/* Right Content - Original Hero Image */}
           <div className="relative hidden lg:block">
-            <div className="relative w-full aspect-square max-w-lg mx-auto animate-float">
-              <Image
-                src={heroData.image || "/placeholder.svg"}
-                alt="Team collaboration illustration"
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
+            <div className="relative">
+              {/* glow behind */}
+              <div className="absolute inset-0 -z-10 bg-gradient-to-br from-cyan-500/20 via-blue-500/20 to-teal-500/20 blur-3xl rounded-full scale-90" />
+              <img
+                src={heroData.image}
+                alt="The Dime Technology - Hero"
+                className="w-full max-w-[560px] mx-auto h-auto object-contain drop-shadow-2xl animate-float"
+                loading="eager"
               />
             </div>
+          </div>
+          {/* Mobile original image */}
+          <div className="lg:hidden mt-8">
+            <img
+              src={heroData.image}
+              alt="The Dime Technology - Hero"
+              className="w-full max-w-[420px] mx-auto h-auto object-contain drop-shadow-xl"
+              loading="eager"
+            />
           </div>
         </div>
 

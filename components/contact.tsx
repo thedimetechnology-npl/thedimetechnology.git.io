@@ -6,6 +6,7 @@ import { MapPin, Phone, Mail, Clock, Send, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { CountrySelect, type Country } from "@/components/ui/country-select"
 import siteConfig from "@/data/site-config.json"
 
 export function Contact() {
@@ -13,12 +14,32 @@ export function Contact() {
     name: "",
     email: "",
     organization: "",
+    country: "NP",
+    phone: "",
     message: "",
   })
+  const [submitting, setSubmitting] = useState(false)
+  const [status, setStatus] = useState<{ type: "success" | "error"; msg: string } | null>(null)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log("Form submitted:", formData)
+    setSubmitting(true)
+    setStatus(null)
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      const j = await res.json()
+      if (!res.ok) throw new Error(j.error || "Failed")
+      setStatus({ type: "success", msg: "Message sent successfully! We'll get back to you soon." })
+      setFormData({ name: "", email: "", organization: "", country: "NP", phone: "", message: "" })
+    } catch (err: any) {
+      setStatus({ type: "error", msg: err.message || "Something went wrong" })
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   const contactItems = [
@@ -109,6 +130,34 @@ export function Contact() {
                 />
               </div>
 
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs sm:text-sm font-medium text-white mb-2">
+                    Country
+                  </label>
+                  <CountrySelect
+                    value={formData.country}
+                    onValueChange={(country: Country) =>
+                      setFormData({ ...formData, country: country.code })
+                    }
+                    placeholder="Search country..."
+                  />
+                </div>
+                <div>
+                  <label htmlFor="phone" className="block text-xs sm:text-sm font-medium text-white mb-2">
+                    Phone
+                  </label>
+                  <Input
+                    id="phone"
+                    type="tel"
+                    placeholder="9801024024"
+                    value={formData.phone}
+                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    className="bg-slate-900/50 border-cyan-500/20 focus:border-cyan-500/60 focus:ring-cyan-500/20 text-white placeholder:text-slate-500 text-sm sm:text-base"
+                  />
+                </div>
+              </div>
+
               <div>
                 <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-white mb-2">
                   Message
@@ -123,11 +172,17 @@ export function Contact() {
                 />
               </div>
 
+              {status && (
+                <div className={`text-sm px-4 py-3 rounded-xl border ${status.type === "success" ? "bg-emerald-500/10 border-emerald-500/20 text-emerald-400" : "bg-red-500/10 border-red-500/20 text-red-400"}`}>
+                  {status.msg}
+                </div>
+              )}
               <Button
                 type="submit"
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-semibold h-12 sm:h-14 text-sm sm:text-base shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-[1.02]"
+                disabled={submitting}
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-slate-900 font-semibold h-12 sm:h-14 text-sm sm:text-base shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-all hover:scale-[1.02] disabled:opacity-60"
               >
-                Send Message
+                {submitting ? "Sending..." : "Send Message"}
                 <Send className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </form>

@@ -1,5 +1,14 @@
 [
   {
+    "name": "Kashif Ahmed",
+    "location": "India",
+    "rating": 5,
+    "feedback": "Nice",
+    "image": "/assets/img/testimonials/KAEM_logo-mttue5xj-0gay.png",
+    "company": "Kaem Software",
+    "designation": ""
+  },
+  {
     "name": "Ashley",
     "location": "United States",
     "rating": 5,
@@ -95,7 +104,7 @@
     "feedback": "Amazing again. These guys understand quicky, and execute really well.",
     "image": "/assets/img/testimonials/ken.jpg"
   },
- {
+  {
     "name": "Ken Lyle",
     "location": "Costa Rica",
     "rating": 5,

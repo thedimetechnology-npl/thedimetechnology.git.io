@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { AdminHeader } from "@/components/admin/admin-header"
+import { ImageUpload } from "@/components/admin/image-upload"
 import { toast } from "sonner"
 import { Plus, Trash2 } from "lucide-react"
 
@@ -40,7 +41,7 @@ export default function TeamAdmin() {
             <CardContent className="grid md:grid-cols-2 gap-4">
               <div><Label className="text-slate-300">Name</Label><Input value={m.name} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], name: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
               <div><Label className="text-slate-300">Role</Label><Input value={m.role} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], role: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
-              <div className="md:col-span-2"><Label className="text-slate-300">Image Path</Label><Input value={m.image} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], image: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
+              <div className="md:col-span-2"><ImageUpload label="Image" value={m.image} onChange={(v) => { const arr = [...data]; arr[i] = { ...arr[i], image: v }; setData(arr) }} folder="assets/img/team" /></div>
               <div><Label className="text-slate-300">LinkedIn</Label><Input value={m.linkedin} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], linkedin: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
               <div><Label className="text-slate-300">Github</Label><Input value={m.github} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], github: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
               <div><Label className="text-slate-300">Email</Label><Input value={m.email} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], email: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>

@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { AdminHeader } from "@/components/admin/admin-header"
+import { ImageUpload } from "@/components/admin/image-upload"
 import { toast } from "sonner"
 
 type HeroData = {
@@ -66,10 +67,7 @@ export default function HeroAdmin() {
               <Label className="text-slate-300">Description</Label>
               <Textarea value={data.description} onChange={(e) => setData({ ...data, description: e.target.value })} className="bg-slate-800 border-slate-700 text-white mt-1" rows={3} />
             </div>
-            <div>
-              <Label className="text-slate-300">Image Path</Label>
-              <Input value={data.image} onChange={(e) => setData({ ...data, image: e.target.value })} className="bg-slate-800 border-slate-700 text-white mt-1" />
-            </div>
+            <ImageUpload label="Hero Image" value={data.image} onChange={(v) => setData({ ...data, image: v })} folder="assets/img" />
           </CardContent>
         </Card>
         <Card className="bg-slate-900 border-slate-800">

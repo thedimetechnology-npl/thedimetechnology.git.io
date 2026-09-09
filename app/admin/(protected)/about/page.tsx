@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { AdminHeader } from "@/components/admin/admin-header"
+import { ImageUpload } from "@/components/admin/image-upload"
 import { toast } from "sonner"
 import { Plus, Trash2 } from "lucide-react"
 
@@ -65,14 +66,8 @@ export default function AboutAdmin() {
               <Textarea value={data.closingNote} onChange={(e) => setData({ ...data, closingNote: e.target.value })} className="bg-slate-800 border-slate-700 text-white mt-1" rows={2} />
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <Label className="text-slate-300">Main Image</Label>
-                <Input value={data.images.main} onChange={(e) => setData({ ...data, images: { ...data.images, main: e.target.value } })} className="bg-slate-800 border-slate-700 text-white mt-1" />
-              </div>
-              <div>
-                <Label className="text-slate-300">Video Image</Label>
-                <Input value={data.images.video} onChange={(e) => setData({ ...data, images: { ...data.images, video: e.target.value } })} className="bg-slate-800 border-slate-700 text-white mt-1" />
-              </div>
+              <ImageUpload label="Main Image" value={data.images.main} onChange={(v) => setData({ ...data, images: { ...data.images, main: v } })} folder="assets/img" />
+              <ImageUpload label="Video Image" value={data.images.video} onChange={(v) => setData({ ...data, images: { ...data.images, video: v } })} folder="assets/img" />
             </div>
           </CardContent>
         </Card>

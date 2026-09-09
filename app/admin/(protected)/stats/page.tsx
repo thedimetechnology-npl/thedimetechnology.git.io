@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { AdminHeader } from "@/components/admin/admin-header"
+import { ImageUpload } from "@/components/admin/image-upload"
 import { toast } from "sonner"
 import { Plus, Trash2 } from "lucide-react"
 
@@ -32,8 +33,7 @@ export default function StatsAdmin() {
         <Card className="bg-slate-900 border-slate-800">
           <CardHeader><CardTitle className="text-white">Settings</CardTitle></CardHeader>
           <CardContent>
-            <Label className="text-slate-300">Image Path</Label>
-            <Input value={data.image} onChange={(e) => setData({ ...data, image: e.target.value })} className="bg-slate-800 border-slate-700 text-white mt-1" />
+            <ImageUpload label="Stats Image" value={data.image} onChange={(v) => setData({ ...data, image: v })} folder="assets/img" />
           </CardContent>
         </Card>
         <Card className="bg-slate-900 border-slate-800">

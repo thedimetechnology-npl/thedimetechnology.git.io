@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { AdminHeader } from "@/components/admin/admin-header"
+import { ImageUpload } from "@/components/admin/image-upload"
 import { toast } from "sonner"
 import { Plus, Trash2 } from "lucide-react"
 
@@ -36,10 +37,12 @@ export default function ClientsAdmin() {
           <CardHeader><CardTitle className="text-white flex items-center justify-between">Clients <Button size="sm" variant="outline" onClick={() => setData({ ...data, clients: [...data.clients, { name: "", logo: "/assets/img/clients/" }] })} className="border-slate-700"><Plus className="h-4 w-4 mr-1" />Add</Button></CardTitle></CardHeader>
           <CardContent className="space-y-3">
             {data.clients.map((c, i) => (
-              <div key={i} className="flex gap-3 items-end">
-                <div className="flex-1"><Label className="text-slate-300">Name</Label><Input value={c.name} onChange={(e) => { const arr = [...data.clients]; arr[i] = { ...arr[i], name: e.target.value }; setData({ ...data, clients: arr }) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
-                <div className="flex-[2]"><Label className="text-slate-300">Logo Path</Label><Input value={c.logo} onChange={(e) => { const arr = [...data.clients]; arr[i] = { ...arr[i], logo: e.target.value }; setData({ ...data, clients: arr }) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
-                <Button variant="ghost" size="icon" onClick={() => setData({ ...data, clients: data.clients.filter((_, idx) => idx !== i) })} className="text-red-400"><Trash2 className="h-4 w-4" /></Button>
+              <div key={i} className="p-3 rounded-xl border border-slate-800 bg-slate-800/30 space-y-3">
+                <div className="flex gap-3 items-end">
+                  <div className="flex-1"><Label className="text-slate-300">Name</Label><Input value={c.name} onChange={(e) => { const arr = [...data.clients]; arr[i] = { ...arr[i], name: e.target.value }; setData({ ...data, clients: arr }) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
+                  <Button variant="ghost" size="icon" onClick={() => setData({ ...data, clients: data.clients.filter((_, idx) => idx !== i) })} className="text-red-400"><Trash2 className="h-4 w-4" /></Button>
+                </div>
+                <ImageUpload label="Logo" value={c.logo} onChange={(v) => { const arr = [...data.clients]; arr[i] = { ...arr[i], logo: v }; setData({ ...data, clients: arr }) }} folder="assets/img/clients" />
               </div>
             ))}
           </CardContent>

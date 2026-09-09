@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { AdminHeader } from "@/components/admin/admin-header"
+import { ImageUpload } from "@/components/admin/image-upload"
 import { toast } from "sonner"
 import { Plus, Trash2 } from "lucide-react"
 
@@ -49,7 +50,7 @@ export default function TestimonialsAdmin() {
                 <div><Label className="text-slate-300">Company</Label><Input value={t.company || ""} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], company: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
                 <div><Label className="text-slate-300">Designation</Label><Input value={t.designation || ""} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], designation: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
               </div>
-              <div><Label className="text-slate-300">Image</Label><Input value={t.image} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], image: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" /></div>
+              <ImageUpload label="Image" value={t.image} onChange={(v) => { const arr = [...data]; arr[i] = { ...arr[i], image: v }; setData(arr) }} folder="assets/img/testimonials" />
               <div><Label className="text-slate-300">Feedback</Label><Textarea value={t.feedback} onChange={(e) => { const arr = [...data]; arr[i] = { ...arr[i], feedback: e.target.value }; setData(arr) }} className="bg-slate-800 border-slate-700 text-white mt-1" rows={2} /></div>
             </CardContent>
           </Card>

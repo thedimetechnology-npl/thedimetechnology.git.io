@@ -49,13 +49,13 @@
       "Flutter",
       "Node.JS"
     ],
-    "company": "Al Yousuf Motors",
-    "country": "UAE",
+    "company": "Siga Sys Chainaway",
+    "country": "Chile",
     "featured": true,
     "published": true,
     "seoTitle": "ZKTeco Biometric App Web and Mobile Integration | The Dime Technology",
     "seoDescription": "ZKTeco ADMS Push, Chainway P80 fingerprint & face capture — full-stack biometric integration by The Dime Technology.",
-    "readingTime": 5
+    "readingTime": 2
   },
   {
     "id": "automated-mssql-backup",
@@ -84,7 +84,7 @@
     "published": true,
     "seoTitle": "Automated MSSQL Database Backup Script | The Dime Technology",
     "seoDescription": "Automated daily MSSQL .BAK backup script with retention, compression and alerts — built by The Dime Technology for ATIT Solutionz.",
-    "readingTime": 3
+    "readingTime": 2
   },
   {
     "id": "ats-enhancement-hierarchy",
@@ -92,7 +92,7 @@
     "title": "ATS Application Enhancement for User Hierarchy & Reporting",
     "excerpt": "Enhance Applicant Tracking System with multi-level user hierarchy, workflow approvals, bulk upload and advanced reporting for Mazenet Solution.",
     "content": "Client Mazenet Solution (India) required ATS enhancements:\n\n- Hierarchy: Recruiter → Team Lead → Manager → Admin with scoped visibility\n- Workflow: application states (Applied → Screened → Interview → Offer → Hired) with approval gates\n- Bulk Upload: CSV/XLSX parsing, validation, duplicate detection\n- Reporting: funnel, source, ageing, hiring velocity dashboards\n\n**Tech Stack:** PHP, Laravel, MySQL, React, Maatwebsite Excel\n\n**Results:** Reduced time-to-hire reporting from 2 days to real-time and enabled bulk import of 10k+ candidates in <2 minutes. Client feedback: \"I am happy to work again. They have completed my project on time as promised.\"",
-    "coverImage": "/assets/img/blog/ats-hierarchy.jpg",
+    "coverImage": "/assets/img/blog/ATS_Application_Enhancement_for-mtv92apu-z55b.jpg",
     "author": "Shahid Alam",
     "date": "2026-08-15",
     "category": "Full-Stack",
@@ -115,119 +115,6 @@
     "published": true,
     "seoTitle": "ATS Enhancement - Hierarchy, Workflow & Reporting | The Dime Technology",
     "seoDescription": "ATS hierarchy, bulk upload and reporting dashboards built with Laravel + React for Mazenet Solution.",
-    "readingTime": 4
-  },
-  {
-    "id": "isp-network-engineer-mikrotik-cisco",
-    "slug": "network-engineer-required-for-mikrotik-to-cisco-asr-migration",
-    "title": "Network Engineer Required for MikroTik to Cisco ASR Migration",
-    "excerpt": "ISP network migration from MikroTik to Cisco ASR: seamless cutover, BGP, OSPF, HSRP and betting app blocking continuity.",
-    "content": "ISP client required betting app blocking and core migration:\n\n- Audit existing MikroTik CHR setup\n- Design Cisco ASR 9000 target with OSPF + BGP peering\n- Implement betting app blocking via DPI + ACLs\n- HSRP, EtherChannel, VLAN, QoS\n- Night cutover with rollback plan\n\n**Tech Stack:** MikroTik, Cisco ASR, BGP, OSPF, HSRP\n\n**Outcome:** Zero-downtime migration completed, blocking accuracy maintained at 99.2%.",
-    "coverImage": "/assets/img/blog/network-mikrotik.jpg",
-    "author": "Shahid Alam",
-    "date": "2026-08-05",
-    "category": "Network and System",
-    "tags": [
-      "Cisco",
-      "MikroTik",
-      "BGP",
-      "Network Security"
-    ],
-    "skills": [
-      "Network and System",
-      "Cisco",
-      "MikroTik"
-    ],
-    "company": "ISP Network",
-    "country": "Nepal",
-    "featured": false,
-    "published": true,
-    "seoTitle": "MikroTik to Cisco ASR Migration & App Blocking | The Dime Technology",
-    "seoDescription": "ISP MikroTik to Cisco ASR migration with BGP/OSPF and betting app blocking by The Dime Technology.",
-    "readingTime": 4
-  },
-  {
-    "id": "python-bulk-image-downloader",
-    "slug": "python-developer-bulk-image-downloader",
-    "title": "Python Developer – Bulk Image Downloader with Retry & Proxy",
-    "excerpt": "Python bulk image downloader that crawls product pages, deduplicates, retries with proxy rotation and saves with organized folder structure.",
-    "content": "Client required a Python tool to bulk download images from e-commerce URLs:\n\n- Input: CSV with product URLs\n- Crawl and extract <img> via BeautifulSoup + lxml\n- Download with aiohttp, 20 concurrent workers\n- Retry with exponential backoff + proxy rotation\n- Deduplicate by hash\n- Save organized by SKU / category\n\n**Tech Stack:** Python, aiohttp, BeautifulSoup, Pillow\n\n**Results:** Downloaded 15k images in 45 minutes with 98.7% success rate.",
-    "coverImage": "/assets/img/blog/python-bulk.jpg",
-    "author": "Shahid Alam",
-    "date": "2026-08-03",
-    "category": "Programming Language",
-    "tags": [
-      "Python",
-      "Automation",
-      "Scraping",
-      "Utilities"
-    ],
-    "skills": [
-      "Python",
-      "Utilities and Scripting"
-    ],
-    "company": "Individual",
-    "country": "USA",
-    "featured": false,
-    "published": true,
-    "seoTitle": "Python Bulk Image Downloader | The Dime Technology",
-    "seoDescription": "Python aiohttp bulk image downloader with proxy rotation and deduplication by The Dime Technology.",
-    "readingTime": 3
-  },
-  {
-    "id": "sharepro-air-url-fix",
-    "slug": "fix-minor-url-issues-in-sharepro-air-application",
-    "title": "Fix Minor URL Issues in SharePro AIR Application",
-    "excerpt": "Quick bug fix for SharePro AIR deep linking and URL routing issues across web and mobile.",
-    "content": "SharePro AIR had minor URL issues causing 404 on deep links:\n\n- Fix Next.js route rewriting\n- Correct sitemap / canonical URLs\n- Handle trailing slash consistency\n- Update share links to use encoded URLs\n\n**Feedback:** \"As usual, Shahid and his team did the work on time and well. Thanks to the Team.\" — Abhay Sobti, SharePro (India)\n\n**Tech Stack:** Next.js, React, Node.js",
-    "coverImage": "/assets/img/blog/sharepro-url.jpg",
-    "author": "Shahid Alam",
-    "date": "2026-08-02",
-    "category": "Full-Stack",
-    "tags": [
-      "Next.JS",
-      "SharePro",
-      "Bug Fix"
-    ],
-    "skills": [
-      "Next.JS",
-      "React"
-    ],
-    "company": "SharePro",
-    "country": "India",
-    "featured": false,
-    "published": true,
-    "seoTitle": "SharePro AIR URL Fix | The Dime Technology",
-    "seoDescription": "Fixed SharePro AIR URL routing and deep linking issues with Next.js — The Dime Technology.",
     "readingTime": 2
-  },
-  {
-    "id": "healthcare-recruitment-system",
-    "slug": "healthcare-recruitment-website-and-management-system",
-    "title": "Healthcare Recruitment Website and Management System",
-    "excerpt": "Full-stack healthcare recruitment platform for Clinical Talent Australia: job board, ATS, candidate compliance checks and automated workflows.",
-    "content": "Built for Clinical Talent Australia:\n\n- Public job board with filters (role, location, AHPRA)\n- Candidate portal: profile, CV, compliance docs\n- ATS for recruiters: shortlist, interview scheduling, offers\n- Compliance workflow: AHPRA check, police check, references\n- Automated emails + client portal\n\n**Tech Stack:** WordPress, PHP, MySQL, React\n\n**Results:** Cut recruitment cycle by 40% and improved candidate compliance tracking.",
-    "coverImage": "/assets/img/blog/healthcare-recruitment.jpg",
-    "author": "Shahid Alam",
-    "date": "2026-04-15",
-    "category": "Full-Stack",
-    "tags": [
-      "Healthcare",
-      "WordPress",
-      "ATS",
-      "Recruitment"
-    ],
-    "skills": [
-      "WordPress",
-      "PHP",
-      "Full-Stack"
-    ],
-    "company": "Clinical Talent Australia",
-    "country": "Australia",
-    "featured": true,
-    "published": true,
-    "seoTitle": "Healthcare Recruitment Platform | The Dime Technology",
-    "seoDescription": "Healthcare recruitment website + ATS for Clinical Talent Australia — WordPress + React solution.",
-    "readingTime": 5
   }
 ]

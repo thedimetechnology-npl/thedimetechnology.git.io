@@ -1,5 +1,14 @@
 [
   {
+    "name": "Fareed",
+    "location": "India",
+    "rating": 5,
+    "feedback": "Shahid has given perfect work. I always recommend him.",
+    "image": "/assets/img/testimonials/awwaltech.jpg",
+    "company": "Awwal Tech",
+    "designation": "CEO"
+  },
+  {
     "name": "Raul Olivares",
     "location": "Chile",
     "rating": 5,

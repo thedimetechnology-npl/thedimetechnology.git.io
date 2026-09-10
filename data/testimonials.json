@@ -1,5 +1,14 @@
 [
   {
+    "name": "Raul Olivares",
+    "location": "Chile",
+    "rating": 5,
+    "feedback": "Excellent experience with Shahid. Delivered the project on time, met all requirements, and showed a great attitude. Flawless work and smooth communication. 100% recommended, highly recommended!",
+    "image": "/assets/img/testimonials/sigasys.jpg",
+    "company": "Siga Sys Chainway",
+    "designation": "General Manager"
+  },
+  {
     "name": "Kashif Ahmed",
     "location": "India",
     "rating": 5,

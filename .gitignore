@@ -10,6 +10,10 @@ coverage/
 .next/
 out/
 build/
+.open-next/
+.wrangler/
+worker.js
+tmp*.sql
 
 # Production
 dist/

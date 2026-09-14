@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "thedimetechnology-git-io",
+  "compatibility_date": "2026-09-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dime-technology-db",
+      "database_id": "056d82c0-5c35-4b58-a2f4-874413379f7f"
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "R2",
+      "bucket_name": "dime-uploads"
+    }
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "not_found_handling": "single-page-application"
+  }
+}

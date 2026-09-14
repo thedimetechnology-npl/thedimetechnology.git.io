@@ -2,7 +2,7 @@ import fs from "fs"
 import path from "path"
 import { execSync } from "child_process"
 
-const files = ["site-config.json","hero.json","about.json","services.json","process.json","stats.json","team.json","testimonials.json","clients.json","tech-stack.json","blogs.json"]
+const files = ["site-config.json","hero.json","about.json","services.json","process.json","stats.json","team.json","testimonials.json","clients.json","tech-stack.json","blogs.json","vacancies.json"]
 
 for (const f of files) {
   const p = path.join("data", f)
@@ -15,7 +15,7 @@ for (const f of files) {
   fs.writeFileSync("tmp.sql", sql)
   console.log(`Seeding ${f}...`)
   try {
-    execSync(`npx wrangler d1 execute dime-db --remote --file=tmp.sql`, { stdio: "inherit" })
+    execSync(`npx wrangler d1 execute dime-technology-db --remote --file=tmp.sql`, { stdio: "inherit" })
   } catch (e) {
     console.error(`Failed ${f}`, e.message)
   }

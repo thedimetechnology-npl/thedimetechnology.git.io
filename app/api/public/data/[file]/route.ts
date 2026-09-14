@@ -12,6 +12,7 @@ import testimonials from "@/data/testimonials.json"
 import clients from "@/data/clients.json"
 import techStack from "@/data/tech-stack.json"
 import blogs from "@/data/blogs.json"
+import vacancies from "@/data/vacancies.json"
 
 const dataMap: Record<string, unknown> = {
   "site-config.json": siteConfig,
@@ -25,6 +26,7 @@ const dataMap: Record<string, unknown> = {
   "clients.json": clients,
   "tech-stack.json": techStack,
   "blogs.json": blogs,
+  "vacancies.json": vacancies,
 }
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ file: string }> }) {

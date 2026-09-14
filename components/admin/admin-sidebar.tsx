@@ -19,6 +19,7 @@ import {
   LogOut,
   Home,
   FileText,
+  Megaphone,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -31,6 +32,7 @@ const navItems = [
   { href: "/admin/process", label: "Process", icon: Workflow },
   { href: "/admin/stats", label: "Stats", icon: BarChart3 },
   { href: "/admin/team", label: "Team", icon: Users },
+  { href: "/admin/vacancies", label: "Vacancies", icon: Megaphone },
   { href: "/admin/testimonials", label: "Testimonials", icon: MessageSquareQuote },
   { href: "/admin/clients", label: "Clients", icon: Handshake },
   { href: "/admin/tech-stack", label: "Tech Stack", icon: Cpu },

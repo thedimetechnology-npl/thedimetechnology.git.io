@@ -13,6 +13,7 @@ import testimonials from "@/data/testimonials.json"
 import clients from "@/data/clients.json"
 import techStack from "@/data/tech-stack.json"
 import blogs from "@/data/blogs.json"
+import vacancies from "@/data/vacancies.json"
 
 const fallbackMap: Record<string, unknown> = {
   "site-config.json": siteConfig,
@@ -26,6 +27,7 @@ const fallbackMap: Record<string, unknown> = {
   "clients.json": clients,
   "tech-stack.json": techStack,
   "blogs.json": blogs,
+  "vacancies.json": vacancies,
 }
 
 type Params = { params: Promise<{ file: string }> }

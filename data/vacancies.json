@@ -1,0 +1,111 @@
+{
+  "sectionTitle": "Join Our Growing Team",
+  "sectionSubtitle": "Build your career with a collective of passionate technologists. Explore open roles and grow with us.",
+  "vacancies": [
+    {
+      "id": "vac-1",
+      "slug": "senior-full-stack-developer",
+      "title": "Senior Full-Stack Developer",
+      "department": "Engineering",
+      "location": "Lalitpur, Nepal (Hybrid)",
+      "employmentType": "Full-time",
+      "experience": "3+ Years",
+      "salary": "Negotiable",
+      "description": "We are looking for a Senior Full-Stack Developer proficient in React/Next.js and Node.js to build scalable web applications for global clients.",
+      "responsibilities": [
+        "Design and develop responsive web applications using React, Next.js and Node.js",
+        "Collaborate with designers and product managers to ship high-quality features",
+        "Write clean, maintainable code and conduct code reviews",
+        "Optimize applications for performance and scalability"
+      ],
+      "requirements": [
+        "3+ years experience with React, Next.js, TypeScript",
+        "Strong knowledge of Node.js, REST APIs, and databases (PostgreSQL/MongoDB)",
+        "Familiarity with Git, CI/CD and cloud deployment (Vercel/AWS)",
+        "Good communication and teamwork skills"
+      ],
+      "benefits": [
+        "Flexible working hours & hybrid setup",
+        "Competitive salary + project bonuses",
+        "Learning & development budget",
+        "Global freelance project exposure"
+      ],
+      "applyEmail": "info@thedimetechnology.com.np",
+      "applyLink": "#contact",
+      "deadline": "2026-10-15",
+      "postedDate": "2026-09-01",
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "vac-2",
+      "slug": "flutter-mobile-developer",
+      "title": "Flutter Mobile Developer",
+      "department": "Mobile App",
+      "location": "Remote",
+      "employmentType": "Full-time",
+      "experience": "2+ Years",
+      "salary": "Negotiable",
+      "description": "Join our mobile team to craft high-performance cross-platform apps using Flutter for diverse clients worldwide.",
+      "responsibilities": [
+        "Build and maintain Flutter applications for iOS and Android",
+        "Integrate REST APIs and third-party SDKs",
+        "Ensure app performance, quality and responsiveness",
+        "Collaborate with backend team and UI/UX designers"
+      ],
+      "requirements": [
+        "2+ years of Flutter & Dart experience",
+        "Knowledge of state management (Provider/Bloc/Riverpod)",
+        "Experience publishing apps to Play Store / App Store",
+        "Understanding of Firebase and mobile CI/CD"
+      ],
+      "benefits": [
+        "Fully remote opportunity",
+        "Work with international clients",
+        "Career growth in mobile ecosystem",
+        "Supportive team culture"
+      ],
+      "applyEmail": "info@thedimetechnology.com.np",
+      "applyLink": "#contact",
+      "deadline": "2026-10-30",
+      "postedDate": "2026-09-10",
+      "featured": true,
+      "published": true
+    },
+    {
+      "id": "vac-3",
+      "slug": "devops-cloud-engineer-intern",
+      "title": "DevOps & Cloud Engineer (Intern)",
+      "department": "DevOps & Cloud",
+      "location": "Imadol, Lalitpur",
+      "employmentType": "Internship",
+      "experience": "0-1 Year",
+      "salary": "Stipend Provided",
+      "description": "Kickstart your DevOps career. Learn CI/CD, Docker, and cloud infrastructure while working on real client projects.",
+      "responsibilities": [
+        "Assist in setting up CI/CD pipelines",
+        "Help manage Docker containers and cloud servers",
+        "Monitor system performance and assist in troubleshooting",
+        "Document infrastructure and deployment processes"
+      ],
+      "requirements": [
+        "Basic knowledge of Linux, Git and Docker",
+        "Familiarity with AWS / Cloudflare / Vercel is a plus",
+        "Eagerness to learn DevOps and automation",
+        "Currently studying or recent graduate in IT/Computer field"
+      ],
+      "benefits": [
+        "Mentorship from senior engineers",
+        "Internship certificate & job opportunity",
+        "Hands-on cloud & DevOps experience",
+        "Friendly learning environment"
+      ],
+      "applyEmail": "info@thedimetechnology.com.np",
+      "applyLink": "#contact",
+      "deadline": "2026-09-30",
+      "postedDate": "2026-09-14",
+      "featured": false,
+      "published": true
+    }
+  ]
+}

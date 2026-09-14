@@ -39,6 +39,14 @@
       "label": "Team"
     },
     {
+      "href": "#vacancies",
+      "label": "Vacancies"
+    },
+    {
+      "href": "/vacancies",
+      "label": "Careers"
+    },
+    {
       "href": "#testimonials",
       "label": "Testimonials"
     },

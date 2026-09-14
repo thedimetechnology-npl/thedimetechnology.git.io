@@ -6,6 +6,7 @@ import { Stats } from "@/components/stats"
 import { Services } from "@/components/services"
 import { Process } from "@/components/process"
 import { Team } from "@/components/team"
+import { Vacancies } from "@/components/vacancies"
 import { Testimonials } from "@/components/testimonials"
 import { TechStack } from "@/components/tech-stack"
 import { Contact } from "@/components/contact"
@@ -22,6 +23,7 @@ export default function Home() {
       <Services />
       <Process />
       <Team />
+      <Vacancies />
       <Testimonials />
       <TechStack />
       <Contact />

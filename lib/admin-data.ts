@@ -15,6 +15,7 @@ export const ALLOWED_FILES = [
   "clients.json",
   "tech-stack.json",
   "blogs.json",
+  "vacancies.json",
 ] as const
 
 export type AllowedFile = (typeof ALLOWED_FILES)[number]

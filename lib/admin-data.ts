@@ -56,7 +56,12 @@ export async function writeDataFileAsync(file: AllowedFile, data: unknown): Prom
     const ok = await d1Put(file, data)
     if (ok) return
   } catch {}
-  writeDataFile(file, data)
+  try {
+    writeDataFile(file, data)
+    return
+  } catch {}
+  // On Workers (read-only fs) without D1, throw so caller can try GitHub fallback
+  throw new Error("No D1 binding and fs unavailable — need GitHub fallback")
 }
 
 // messages handling (contact form)

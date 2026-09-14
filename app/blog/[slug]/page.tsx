@@ -1,19 +1,22 @@
 import { notFound } from "next/navigation"
 import type { Metadata } from "next"
 import Link from "next/link"
-import { getAllBlogs, getPublishedBlogs, getBlogBySlug } from "@/lib/blogs"
+import { getAllBlogs, getPublishedBlogs, getPublishedBlogsAsync, getBlogBySlug, getBlogBySlugAsync } from "@/lib/blogs"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Calendar, Clock, Tag, ArrowLeft, Building2, Globe } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
+export const dynamic = "force-dynamic"
+
 export async function generateStaticParams() {
+  // Use sync fallback for build-time params (covers git data); live will be force-dynamic
   return getPublishedBlogs().map((b) => ({ slug: b.slug }))
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params
-  const post = getBlogBySlug(slug)
+  const post = (await getBlogBySlugAsync(slug)) ?? getBlogBySlug(slug)
   if (!post) return {}
   return {
     title: post.seoTitle || post.title,
@@ -42,10 +45,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogDetailPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
-  const post = getBlogBySlug(slug)
+  const post = (await getBlogBySlugAsync(slug)) ?? getBlogBySlug(slug)
   if (!post) notFound()
 
-  const related = getPublishedBlogs().filter((b) => b.category === post.category && b.slug !== post.slug).slice(0, 3)
+  const allPubs = await getPublishedBlogsAsync()
+  const related = allPubs.filter((b) => b.category === post.category && b.slug !== post.slug).slice(0, 3)
 
   const jsonLd = {
     "@context": "https://schema.org",

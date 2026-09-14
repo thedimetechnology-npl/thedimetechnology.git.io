@@ -1,12 +1,14 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { getPublishedBlogs, getAllCategories, getAllTags } from "@/lib/blogs"
+import { getPublishedBlogsAsync, getAllCategoriesAsync, getAllTagsAsync } from "@/lib/blogs"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Calendar, Clock, Tag, Search, ArrowRight, Star } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import BlogFilters from "./BlogFilters"
+
+export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: "Project Portfolio Blog | The Dime Technology - Freelance Case Studies",
@@ -43,9 +45,9 @@ export default function BlogListingPage({
 
 async function BlogContent(searchParams: Promise<{ q?: string; category?: string; tag?: string }>) {
   const params = await searchParams
-  const all = getPublishedBlogs()
-  const categories = getAllCategories()
-  const tags = getAllTags()
+  const all = await getPublishedBlogsAsync()
+  const categories = await getAllCategoriesAsync()
+  const tags = await getAllTagsAsync()
 
   const q = (params.q || "").toLowerCase()
   const cat = params.category || ""

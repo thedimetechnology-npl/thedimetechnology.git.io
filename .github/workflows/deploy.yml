@@ -12,19 +12,23 @@ jobs:
       contents: read
     env:
       ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
+      NPM_CONFIG_LEGACY_PEER_DEPS: "true"
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
+      - name: Show versions
+        run: node --version; npm --version; cat .npmrc; cat package.json | grep -A2 '"next"'
+
       - name: Install deps
-        run: npm ci --legacy-peer-deps || npm install --legacy-peer-deps
+        run: npm ci --legacy-peer-deps || npm install --force
 
       - name: Build Next.js + OpenNext
-        run: npx --yes @opennextjs/cloudflare@1.19.1 build
+        run: npx --yes @opennextjs/cloudflare@1.19.1 build --verbose 2>&1 | head -n 300
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
